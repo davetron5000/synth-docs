@@ -1,0 +1,5 @@
+# site/ is where everything is built and served from
+site
+
+# node_modules needs no introduction
+node_modules

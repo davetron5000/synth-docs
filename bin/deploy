@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+
+bin/build production
+rm -rf site/production
+

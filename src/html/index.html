@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%- include("templates/head.html", { title: "Tleilax Website Template",
+                                         description: "Tleilax Website Tleilax",
+                                         url: "https://davetron5000.github.io/tleilax",
+                                       }) %>
+  </head>
+  <body class="ff-sans">
+    <header class="blue-darker pv-4 bg-blue-lighter">
+      <div class="mh-auto w-90 w-50-ns flex items-center gap-3">
+        <img src="<%= root_url %>/images/icons/icon.png" class="bg-white w-5 h-5 br-3 pa-2 shadow-3"
+                                          alt="A hand-drawn medieval printing press, heavily pixelated"
+             itemref="logo-image-acd-level logo-image-acd-version logo-image-acd-ai-name logo-image-acd-details">
+        <data id="logo-image-acd-level"
+              itemprop="ai-content-declaration:version"
+              value="1.0.0" />
+        <data id="logo-image-acd-level"
+              itemprop="ai-content-declaration:level"
+              value="creative" />
+        <data id="logo-image-acd-ai-name"
+              itemprop="ai-content-declaration:ai-name"
+              value="DALL-E" />
+        <data id="logo-image-acd-details"
+              itemprop="ai-content-declaration:details"
+              value="A medieval printing press, with hand drawn art." />
+        <div>
+          <h1 class="ma-0 lh-title">Tleilax</h1>
+          <h2 class="ma-0 mt-1 lh-title">Basic Static Site Generator</h2>
+        </div>
+      </div>
+    </header>
+    <main class="bg-blue-lightest blue-dark">
+      <div class="mh-auto w-90 w-50-ns ff-sans pv-3">
+        <h3 class="ma-0">Getting Started</h3>
+        <p class="p">
+          This is a template repo that contains some scripts and other code to create a basic static site using EJS.  It contains a development environment as well as scripts to automatically rebuild the site based on changes.
+        </p>
+        <ol>
+          <li><p class="p">
+            Clone the repo, using it as a template.
+          </p></li>
+          <li><p class="p">
+            Make sure you have Docker installed.
+          </p></li>
+          <li><p class="p">
+            <code>dx/build</code>
+          </p></li>
+          <li><p class="p">
+            <code>dx/start</code>
+          </p></li>
+          <li><p class="p">
+            In another terminal, <code>dx/exec bin/setup</code>
+          </p></li>
+          <li><p class="p">
+            In that same other terminal, <code>dx/exec bin/dev</code>
+          </p></li>
+          <li><p class="p">
+            Open <code>http://localhost:5555</code> in your browser.
+          </p></li>
+        </ol>
+        <h3 class="ma-0">What's What</h3>
+        <p class="p">All files for your site are inside <code>src/</code>:</p>
+        <ul>
+          <li>
+            <p class="p">
+              <code>src/assets</code> should contain any non-CSS, non-HTML, non-image files, e.g. PDFs.
+            </p>
+          </li>
+          <li>
+            <p class="p">
+              <code>src/css/index.css</code> contains your CSS.  By default, it references the <a href="https://melangecss.com">MelangeCSS</a> library installed by default.  You can change that and remove it from <code>package.json</code> if you like.
+            </p>
+          </li>
+          <li>
+            <p class="p">
+              <code>src/html</code> is the root of the site.  This files, except for <code>src/html/templates</code>, will be processed through EJS to produce the site.  Any file with a <code>.html</code> extension will be processed.
+            </p>
+            <ul>
+              <li>
+                <p class="p">
+                  <code>src/html/templates</code> contain re-usable templates or partials for your EJS.  By default, <code>src/html/templates/head.html</code> is here, and it is referenced by <code>src/html/index.html</code> as an example of what to do.
+                </p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p class="p">
+              <code>src/images</code> will be copied to <code>/images</code> in your site.  Any file is copied.
+            </p>
+            <ul>
+              <li>
+                <p class="p">
+                  <code>src/images/icons/icon.png</code> is your favicon.  This will be turned into <code>/favicon.ico</code>, <code>/iamges/icons/icon-180.png</code>, <code>/iamges/icons/icon-192.png</code>, and <code>/iamges/icons/icon-512.png</code> automatically.  <code>icon-180.png</code> is referenced in <code>src/html/templates/head.html</code>, and the other two are referenced in the webmanifest, which is created automatically.
+                </p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p class="p">
+              <code>src/js/index.js</code> contains your JavaScript.  It's built by esbuild, so you can use <code>import</code> or whatever.
+            </p>
+          </li>
+        </ul>
+        <h3 class="ma-0">That's One Helluva Toolchain</h3>
+        <p class="p">This brings together a meager, but effective, toolchain.</p>
+        <ul>
+          <li>
+            <p class="p">
+              <code>make</code> orchestrates everything via the <code>Makefile</code>.
+            </p>
+          </li>
+          <li>
+            <p class="p">
+              EJS provides dynamic template-construction.
+            </p>
+          </li>
+          <li>
+            <p class="p">
+              chokidar watches for changes and re-builds everything.
+            </p>
+          </li>
+          <li>
+            <p class="p">
+              esbuild handles building CSS and JS.
+            </p>
+          </li>
+          <li>
+            <p class="p">
+              http-server serves it up locally.
+            </p>
+          </li>
+        </ul>
+        <h3 class="ma-0">Deploying</h3>
+        <p class="p">
+          This depends on how you deploy.  You will need to modify <code>bin/deploy</code> to suit your needs  Currently it does <code>bin/build production</code>, which will put all the files in <code>site/production</code>.
+        </p>
+      </div>
+    </main>
+    <footer class="bg-black-ish white-ish pv-4">
+      <p class="p mh-auto tc">Everything here is Copyright &copy; 2023 by David Bryant Copeland, Released under the <a class="blue-light" href="https://firstdonoharm.dev/version/2/1/license/">Hippocratic License, v2.1</a>.
+        <p class="p mh-auto tc">All of the code and content was created <a class="green-lighter" href="https://declare-ai.org/1.0.0/none.html">without any assistance from a generative AI</a>.  The logo was <a class="green-lighter" href="https://declare-ai.org/1.0.0/creative.html">created by DALL-E and edited by me</a>.
+    </footer>
+  </body>
+</html>

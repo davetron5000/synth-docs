@@ -1,0 +1,16 @@
+{
+  "name": "tleilax",
+  "version": "1.0.0",
+  "description": "Template for basic static site",
+  "main": "index.js",
+  "author": "David Bryant Copeland",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "private": true,
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "ejs": "^3.1.9",
+    "esbuild": "^0.19.5",
+    "http-server": "^14.1.1",
+    "melange-css": "^1.0.0-beta6"
+  }
+}

@@ -1,0 +1,5 @@
+@import "melange-css/melange.css";
+
+:root {
+  --mg-ff-sans: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+}

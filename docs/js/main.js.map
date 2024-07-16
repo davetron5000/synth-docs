@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/js/index.js"],
+  "sourcesContent": ["document.addEventListener(\"DOMContentLoaded\", (event) => {\n  console.log(\"The spice must flow\")\n})\n"],
+  "mappings": "MAAA,SAAS,iBAAiB,mBAAqBA,GAAU,CACvD,QAAQ,IAAI,qBAAqB,CACnC,CAAC",
+  "names": ["event"]
+}

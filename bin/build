@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -e
+
+if [ "$1" = "help" ] || [ "$1" = "-h" ]; then
+  echo "usage: $0 [dev|production]"
+  exit 0
+fi
+
+ENV=$1
+if [ -z "${ENV}" ]; then
+  ENV=dev
+fi
+
+PROD_DIR=$2
+
+if [ "${ENV}" = "dev" ] || [ "${ENV}" = "production" ]; then
+  export ENV
+  export PROD_DIR
+  make
+  exit
+fi
+
+echo "usage: $0 [dev|production]"
+exit 1
+
