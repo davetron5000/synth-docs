@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%- include("../templates/head.html", { 
+    title: "Synth Docs for Korg Volca Drum",
+    description: "Synth Docs for Korg Volca Drum",
+                                         
+    url: "/",
+                                       }) %>
+  </head>
+  <body class="ff-sans">
+    <header class="purple-lighter pv-4 bg-purple-dark">
+      <div class="mh-auto w-90 w-50-ns flex items-center gap-3">
+        <div>
+          <h1 class="f-5 ma-0 lh-title"><a href="/" class="purple-lighter">Synth Docs</a></h1>
+          <h2 class="f-7 ma-0 mt-1 lh-title">KORG Volca Drum</h2>
+        </div>
+      </div>
+    </header>
+    <main class="bg-purple-darkest purple-lightest pv-3">
+      <div class="mh-auto w-100 w-50-ns ff-sans">
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Accent Steps",
+               steps: [
+                 "Tap the instrument/part to edit (button 1–6)",
+                 "Tap <span class='synth-button'>Edit/Step</span>",
+                 "Tap <span class='synth-button'>Accent</span>",
+                 "Tap any of the 16 pads to add/remove accents",
+                 "While holding one of the 16 pads, the <span class='synth-knob'>Level</span> knob can adjust the amount of accent",
+               ],
+               notes: "Note that an accent may be placed where there is no trigger, so be sure you have triggered the instrument at the step you are accenting",
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Bit Reduction, Fold, Drive, Pan, Gain",
+               steps: [
+                 "Tap the instrument/part to edit (button 1–6)",
+                 "Tap <span class='synth-button'>Edit/Step</span>",
+                 "Turn <span class='synth-knob'>Select (Param)</span> to choose which aspect to modify",
+                 "Turn <span class='synth-knob'>Level</span> to change the value",
+               ],
+               notes: "These parameters are <strong>per instrument/track</strong> and not per layer",
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Choke Groups",
+               steps: [
+                 "Hold down <span class='synth-button'>Function</span> and press <span class='synth-button'>8</span>",
+                 "Tap instrument / part 1–6 to add that part to the choke group",
+                 "Tap any key to exit this mode",
+               ],
+               notes: "When two parts in the choke group are playing, the <strong>lowest</strong> will have priority",
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Copy Instrument",
+               steps: [
+                 "Tap instrument / part 1–6 to copy from",
+                 "Hold down <span class='synth-button'>Function</span> and press <span class='synth-button'>7</span> to enter copy mode",
+                 "Tap instrument / part 1–6 to copy to",
+               ],
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Motion Recording",
+               steps: [
+                 "Hold down <span class='synth-button'>Function</span> and press 12 until the light is on (this enabled motion recording)",
+                 "Press <span class='synth-button'>▶️</span> to start playback",
+                 "Tap instrument / part 1–6 to record motion for",
+                 "Press <span class='synth-button'>⏺</span> and move clear knobs",
+               ],
+               note: "After one cycle of the sequence completes, motion recording will stop. You will need to time it right.",
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Mute Instruments / Parts",
+               steps: [
+                 "Hold down <span class='synth-button'>Mute</span>",
+                 "Tap the instrument/part to mute or unmute (button 1–6)",
+               ],
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Polyrhythms / Step Count Per Instrument",
+               steps: [
+                 "Tap the instrument/part to edit (button 1–6)",
+                 "Tap <span class='synth-button'>Act Step</span>",
+                 "Tap buttons 1–16 to turn on/off that step during playback",
+               ],
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Probability of Step",
+               steps: [
+                 "Tap the instrument/part to edit (button 1–6)",
+                 "Tap <span class='synth-button'>Edit/Step</span>",
+                 "Hold a pad (1–16), then turn <span class='synth-knob'>Level</span> to adjust the probability",
+               ],
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Ratchet or Flam Steps",
+               steps: [
+                 "Tap the instrument/part to edit (button 1–6)",
+                 "Tap <span class='synth-button'>Edit/Step</span>",
+                 "Tap <span class='synth-button'>Slice</span>",
+                 "Tap any of the 16 pads to add/remove ratchets",
+                 "Hold a selected pad, then turn <span class='synth-knob'>Level</span> to adjust the number of repeated triggers",
+               ],
+               notes: "Note that an accent may be placed where there is no trigger, so be sure you have triggered the instrument at the step you are accenting",
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Set MIDI Channel & Mode",
+               steps: [
+                 "Turn off Volca",
+                 "Hold down <span class='synth-button'>⏺</span> and turn Volca on",
+                 "To set single-channel mode, tap one of the 1–16 buttons to set the channel",
+                 "Tap the lit channel to disable all channels and configure split channel mode",
+                 "Tap <span class='synth-button'>⏺</span> to save the selection",
+                 "Tap <span class='synth-button'>▶️</span> to abort the change",
+               ],
+               note: "In split channel mode, instrument / part 1–6 respond on MIDI channels 1–6, respectively.",
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Step Repeat / Roll",
+               steps: [
+                 "Press <span class='synth-button'>▶️</span> to start playback",
+                 "Tap <span class='synth-button'>Step Jump</span> to enter step jump mode",
+                 "Tap the step on pad 1–16 to repeat all triggers on that step as <sup>1</sup>&frasl;<sub>16</sub> notes",
+                 "Release the pad to resume normal playback",
+                 "Tap <span class='synth-button'>Step Jump</span> to exit step jump mode",
+               ],
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Trigger Steps",
+               steps: [
+                 "Tap the instrument/part to edit (button 1–6)",
+                 "Tap <span class='synth-button'>Edit/Step</span>",
+                 "Tap any of the 16 pads to add/remove triggers",
+               ],
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/notes.html",
+             {
+               notes: [
+                 "Waveguide send is per instrument, not per layer",
+                 "Swing moves even steps 0-75% backward. Hold <span class='synth-button'>Func</span> while turning to move forward",
+               ],
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/midi.html",
+             {
+               programChange: true,
+               cc: {
+                "Waveguide Model": "116",
+                "Waveguide Decay": "117",
+                "Waveguide Body": "118",
+                "Waveguide Tune": "119",
+               },
+             }
+           )
+         %>
+      </div>
+    </main>
+    <footer class="bg-black-ish white-ish pv-4">
+      <p class="p mh-auto tc">Everything here is Copyright &copy; 2024 by David Bryant Copeland, Released under the <a class="purple-light" href="https://firstdonoharm.dev/version/2/1/license/">Hippocratic License, v2.1</a>.
+        <p class="p mh-auto tc">All of the code and content was created <a class="green-lighter" href="https://declare-ai.org/1.0.0/none.html">without any assistance from a generative AI</a>.
+    </footer>
+  </body>
+</html>

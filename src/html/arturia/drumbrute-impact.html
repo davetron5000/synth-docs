@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%- include("../templates/head.html", { 
+    title: "Synth Docs for Arturia Drumbrute Impact",
+    description: "Synth Docs for Arturia Drumbrute Impact",
+    url: "/",
+                                       }) %>
+  </head>
+  <body class="ff-sans">
+    <header class="purple-lighter pv-4 bg-purple-dark">
+      <div class="mh-auto w-90 w-50-ns flex items-center gap-3">
+        <div>
+          <h1 class="f-5 ma-0 lh-title"><a href="/" class="purple-lighter">Synth Docs</a></h1>
+          <h2 class="f-7 ma-0 mt-1 lh-title">Arturia Drumbrute Impact</h2>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="mh-auto w-100 w-50-ns ff-sans mh-2">
+        <h3 class="sr-only">Features</h3>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "All Notes Off",
+               steps: [
+                 "Press <span class='synth-button'>⏹️</span> quickly three times in a row",
+               ],
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Copy Instrument Pattern",
+               steps: [
+                 "Press <span class='synth-button'>Copy</span>",
+                 "Press the pad of the instrument to copy from",
+                 "Optionally, press <span class='synth-button'>Bank</span> and then a target bank",
+                 "Optionally, press <span class='synth-button'>Pattern</span> and then a target pattern",
+                 "Press the pad of the instrument to copy to",
+               ],
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Copy Entire Pattern",
+               steps: [
+                 "Select the pattern to copy from",
+                 "Press <span class='synth-button'>Copy</span>",
+                 "Press the step for the pattern to copy to",
+               ],
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Extend Pattern, blank data",
+               steps: [
+                 "Select the pattern",
+                 "Hold <span class='synth-button'>Last Step</span>, then press <span class='synth-button'>»</span> to select the 16-step portion of the 64-step pattern",
+                 "Press step button 1–16 to set the last step of that 16-step portion",
+               ],
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Extend Pattern, copying data",
+               steps: [
+                 "Select the pattern",
+                 "Hold <span class='synth-button'>Shift</span> and press <span class='synth-button'>»</span>",
+               ],
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Mute Instruments / Parts",
+               steps: [
+                 "Tap <span class='synth-button'>Mute</span>",
+                 "Tap the instrument/part to mute or unmute",
+                 "Tapping <span class='synth-button'>Mute</span> again will unmute everything",
+                 "Tapping <span class='synth-button'>Mute</span> again re-mute what was muted previously",
+                 "Hold <span class='synth-button'>Shift</span> and tap <span class='synth-button'>Mute</span> to clear all solo'ed instruments from the group",
+               ],
+               notes: "This is the behavior when in <em>Toggle</em> mode, which is set in MIDI Control Center",
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Polyrhythms / Step Count Per Instrument",
+               steps: [
+                 "Hold <span class='synth-button'>Shift</span> and tap <span class='synth-button'>16</span> to enable Polyrhythms for the pattern (if needed)",
+                 "Tap one of the pads to configure its pattern length",
+                 "Tap <span class='synth-button'>Step</span> to enter step edit mode",
+                 "Hold <span class='synth-button'>Last Step</span> and tap one of the buttons 1–16 to set the last step for that instrument",
+               ],
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Random for Instrument",
+               steps: [
+                 "Tap the instrument/part to edit (button 1–6)",
+                 "Tap <span class='synth-button'>Current Track</span>, next to the <span class='synth-knob'>Random</span> knob.",
+                 "Adjust <span class='synth-knob'>Random</span> to add random behavior to that track.",
+               ],
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Random for Pattern",
+               steps: [
+                 "If lit, tap <span class='synth-button'>Current Track</span>, next to the <span class='synth-knob'>Random</span> knob so that it's unlit.",
+                 "Adjust <span class='synth-knob'>Random</span> to add random behavior to the pattern.",
+               ],
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Ratchet or Flam Steps",
+               steps: [
+                 "Tap the instrument to edit",
+                 "Hold down a step button 1–16",
+                 "Tap the Roller to set the repeat: <ul><li class='p'><span class='synth-button synth-button-narrow'><sup>1</sup>&frasl;<sub>4</sub></span> for 1 trigger</li><li class='p'><span class='synth-button synth-button-narrow'><sup>1</sup>&frasl;<sub>8</sub></span> for 2 triggers</li><li class='p'><span class='synth-button synth-button-narrow'><sup>1</sup>&frasl;<sub>16</sub></span> for 3 triggers</li><li class='p'><span class='synth-button synth-button-narrow'><sup>1</sup>&frasl;<sub>32</sub></span> for 4 triggers</li></ul>"
+               ],
+               notes: "When holding down the step, the light above the Roller indicates the current state",
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Roll Instrument (Roller)",
+               steps: [
+                 "Press <span class='synth-button'>▶️</span> to start playback",
+                 "Hold <span class='synth-button'>Shift</span> and tap <span class='synth-button synth-button-narrow'>9</span> so that the button is <strong>lit</strong>",
+                 "Hold down one of the four buttons in the Touch Strip",
+                 "Tap and hold an instrument button to roll that instrument",
+               ],
+               notes: "The frequency of the roll depends upon where on the Touch Strip you are touching",
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Solo Instruments / Parts",
+               steps: [
+                 "Tap <span class='synth-button'>Solo</span>",
+                 "Tap the instrument/part to solo or remove from solo group",
+                 "Tapping <span class='synth-button'>Solo</span> again will unmute everything",
+                 "Tapping <span class='synth-button'>Solo</span> again re-solo what was solo'ed previously",
+                 "Hold <span class='synth-button'>Shift</span> and tap <span class='synth-button'>Solo</span> to clear all solo'ed instruments from the group",
+               ],
+               notes: "This is the behavior when in <em>Toggle</em> mode, which is set in MIDI Control Center",
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Step Repeat (Looper)",
+               steps: [
+                 "Press <span class='synth-button'>▶️</span> to start playback",
+                 "Hold <span class='synth-button'>Shift</span> and tap <span class='synth-button synth-button-narrow'>9</span> so that the button is <strong>unlit</strong>",
+                 "Hold down one of the four buttons in the Touch Strip",
+                 "Tap and hold a step button to repeat the pattern from that step",
+               ],
+               notes: "The length of the repeat depends upon where on the Touch Strip you are touching",
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/doc.html",
+             {
+               title: "Time Division",
+               steps: [
+                 "Select the pattern to modify",
+                 "Hold <span class='synth-button'>Shift</span> and tap 1–5 to change the timing of steps. Refer to the blue labels",
+               ],
+             }
+           )
+         %>
+      </section>
+      <section class="mh-auto w-100 w-50-ns ff-sans mh-2">
+        <%-
+           include(
+             "../templates/notes.html",
+             {
+               notes: [
+                 "You must hit <span class='synth-button'>Sync</span> to select MIDI if using MIDI. Every. Single. Time.",
+                 "Closed HH will choke Open HH",
+                 "When cable is plugged into individual out, it's removed from the main out and headphones out",
+                 "Distortion only applies to instruments sent into Main out, not anything on individual outs",
+               ],
+             }
+           )
+         %>
+        <%-
+           include(
+             "../templates/midi.html",
+             {
+               programChange: true,
+               cc: {},
+               notes: "MIDI Channel must be changed in MIDI Control Center",
+             }
+           )
+         %>
+      </section>
+    </main>
+    <footer class="bg-black-ish white-ish pv-4">
+      <p class="p mh-auto tc">Everything here is Copyright &copy; 2024 by David Bryant Copeland, Released under the <a class="purple-light" href="https://firstdonoharm.dev/version/2/1/license/">Hippocratic License, v2.1</a>.
+        <p class="p mh-auto tc">All of the code and content was created <a class="green-lighter" href="https://declare-ai.org/1.0.0/none.html">without any assistance from a generative AI</a>.
+    </footer>
+  </body>
+</html>
