@@ -2,6 +2,6 @@
 
 set -e
 
-bin/build production
+bin/build production docs
 rm -rf site/production
 

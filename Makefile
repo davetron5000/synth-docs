@@ -67,6 +67,8 @@ $(JS_DEST_FILE) : $(JS_SRC_FILES)
 	npx esbuild $(MINIFY_JS_FLAG) --sourcemap --bundle $(JS_SRC_FILE) --outfile=$(JS_DEST_FILE)
 
 $(HTML_DEST_DIR)/%.html: $(HTML_SRC_DIR)/%.html
+	@mkdir -p $(HTML_DEST_DIR)/korg
+	@mkdir -p $(HTML_DEST_DIR)/arturia
 	npx ejs --data-file $(EJS_DATA_FILE) --output-file $@ $<
 
 $(IMAGES_DEST_DIR):
