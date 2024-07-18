@@ -8,10 +8,12 @@ DEST_DIR=site/$(ENV)
 ifeq ($(ENV),production)
 	MINIFY_CSS_FLAG=--minify
 	MINIFY_JS_FLAG=--minify
+	ROOT_URL=/synth-docs
 ifdef PROD_DIR
 	DEST_DIR=$(PROD_DIR)
 endif
 else
+	ROOT_URL=/
 	MINIFY_CSS_FLAG=
 	MINIFY_JS_FLAG=
 endif
@@ -20,8 +22,16 @@ EJS_DATA_FILE=ejs_data_file.$(ENV).json
 ## Source Files
 SRC_DIR=src
 
+
+SYNTH_SRC_DIR=$(SRC_DIR)/synths
+SYNTH_SRC_FILES=$(shell find $(SYNTH_SRC_DIR) -name '*.json')
+
 HTML_SRC_DIR=$(SRC_DIR)/html
+HTML_TEMPLATES_SRC_DIR=$(HTML_SRC_DIR)/templates
 HTML_SRC_FILES=$(shell find $(HTML_SRC_DIR) -name '*.html' -not -path '*/templates/*')
+
+SYNTH_TEMPLATE_FILE=$(HTML_TEMPLATES_SRC_DIR)/synth.html
+INDEX_TEMPLATE_FILE=$(HTML_TEMPLATES_SRC_DIR)/index.html
 
 CSS_SRC_DIR=$(SRC_DIR)/css
 CSS_SRC_FILE=$(CSS_SRC_DIR)/index.css
@@ -42,6 +52,11 @@ MANIFEST_DEST=$(DEST_DIR)/manifest.webmanifest
 
 HTML_DEST_DIR=$(DEST_DIR)
 HTML_DEST_FILES=${subst $(HTML_SRC_DIR),$(HTML_DEST_DIR),$(HTML_SRC_FILES)}
+
+SYNTH_DEST_DIR=$(DEST_DIR)/synths
+SYNTH_DEST_FILES=${subst json,html, ${subst $(SYNTH_SRC_DIR),$(SYNTH_DEST_DIR),$(SYNTH_SRC_FILES)}}
+
+INDEX_DEST_FILE=$(DEST_DIR)/index.html
 
 IMAGES_DEST_DIR=$(DEST_DIR)/images
 ICONS_DEST_DIR=$(IMAGES_DEST_DIR)/icons
@@ -67,9 +82,13 @@ $(JS_DEST_FILE) : $(JS_SRC_FILES)
 	npx esbuild $(MINIFY_JS_FLAG) --sourcemap --bundle $(JS_SRC_FILE) --outfile=$(JS_DEST_FILE)
 
 $(HTML_DEST_DIR)/%.html: $(HTML_SRC_DIR)/%.html
-	@mkdir -p $(HTML_DEST_DIR)/korg
-	@mkdir -p $(HTML_DEST_DIR)/arturia
 	npx ejs --data-file $(EJS_DATA_FILE) --output-file $@ $<
+
+$(SYNTH_DEST_DIR):
+	@mkdir -p $(SYNTH_DEST_DIR)
+
+$(INDEX_DEST_FILE) $(SYNTH_DEST_FILES): $(INDEX_TEMPLATE_FILE) $(SYNTH_SRC_FILES) $(SYNTH_TEMPLATE_FILE)
+	@bin/mk_synth.js  --input $(SYNTH_SRC_DIR) --outputRoot $(DEST_DIR) --outputDirInRoot synths --template $(SYNTH_TEMPLATE_FILE) --indexTemplate $(INDEX_TEMPLATE_FILE) --root $(ROOT_URL)
 
 $(IMAGES_DEST_DIR):
 	@mkdir -p $(IMAGES_DEST_DIR)
@@ -107,7 +126,9 @@ clean:
 	@rm -rf $(DEST_DIR)
 
 debug:
-	@echo $(ASSETS_DEST_FILES)
+	@echo $(SYNTH_SRC_DIR)
+	@echo $(SYNTH_SRC_FILES)
+	@echo $(SYNTH_DEST_FILES)
 
-default: $(CSS_DEST_FILE) $(JS_DEST_FILE) $(HTML_DEST_FILES) $(ICONS_DEST_DIR) $(IMAGES_DEST_DIR) $(IMAGES_DEST_FILES) $(ASSETS_DEST_DIR) $(ASSETS_DEST_FILES) $(FAVICON_ICO) $(MANIFEST_DEST) $(ICON_180)
+default: $(CSS_DEST_FILE) $(JS_DEST_FILE) $(HTML_DEST_FILES) $(ICONS_DEST_DIR) $(IMAGES_DEST_DIR) $(IMAGES_DEST_FILES) $(ASSETS_DEST_DIR) $(ASSETS_DEST_FILES) $(FAVICON_ICO) $(MANIFEST_DEST) $(ICON_180) $(SYNTH_DEST_DIR) $(SYNTH_DEST_FILES) $(INDEX_DEST_FILE)
 	@echo Done with $(ENV)

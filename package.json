@@ -6,6 +6,7 @@
   "author": "David Bryant Copeland",
   "license": "SEE LICENSE IN LICENSE.txt",
   "private": true,
+  "type": "module",
   "devDependencies": {
     "chokidar-cli": "^3.0.0",
     "ejs": "^3.1.9",

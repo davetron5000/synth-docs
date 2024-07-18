@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%- include(
+      "head.html",
+      { 
+        title: `Menu Diving | ${ synth.name }`,
+        description: `Menu Diving Support for ${ synth.name }`,
+      }
+    ) %>
+  </head>
+  <body class="ff-sans">
+    <header class="purple-lighter pv-4 bg-purple-dark">
+      <div class="mh-auto w-90 w-50-ns flex items-center gap-3">
+        <div>
+          <h1 class="f-5 ma-0 lh-title"><a href="/" class="purple-lighter">menudiving.wtf</a></h1>
+          <h2 class="f-7 ma-0 mt-1 lh-title">
+            <div>
+            <%= synth.name %>
+            </div>
+            <% if (synth.firmware) { %>
+            <small class="db f-4">
+              <span role="image" aria-description="floppy disk">💾</span>
+              Firmware <%= synth.firmware %>
+            </small>
+            <% } %>
+          </h2>
+          <% if (synth.manualLink) { %>
+          <a class="db gray-lightest mt-3" href="<%= synth.manualLink %>"><span role="img" aria-description="open book">📖</span> Official Manual</a>
+          <% } %>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="mh-auto w-100 w-50-ns ff-sans mh-2">
+        <h3 class="sr-only">Features</h3>
+        <% for (const [featureName,feature] of Object.entries(synth.features)) { %>
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu"><%= featureName %></h4>
+            </summary>
+            <ol>
+              <% feature.steps.forEach( (step) => { %>
+              <li><p class="p">
+                <%- step %>
+                </p></li>
+              <% })%>
+            </ol>
+            <% if (typeof feature.notes !== "undefined") { %>
+            <p class="f-1 i measure-wide ph-3"><%- feature.notes %></p>
+            <% } %>
+          </details>
+        <% } %>
+      </section>
+      <section class="mh-auto w-100 w-50-ns ff-sans mh-2">
+        <% if (synth.notes) { %>
+          <details class="bg-yellow-darker yellow-lightest pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h3 class="f-4 tdu">Notes and Non-Obvious Behaviors</h3>
+            </summary>
+            <ul>
+              <% synth.notes.forEach( (step) => { %>
+              <li><p class="p">
+                <%- step %>
+                </p></li>
+              <% })%>
+            </ul>
+          </details>
+        <% } %>
+        <details class="bg-yellow-lighest yellow-darker pa-2">
+          <summary class="ma-0 f-4 lh-title pv-2">
+            <h3 class="f-4 tdu">MIDI Info &amp; CCs</h3>
+          </summary>
+          <% if (synth.midi.programChange) {  %>
+            <p class="f-1 fw-4"><span role="img" aria-label="checkmark">✅</span> Responds to Program Change</p>
+          <% } else { %>
+            <p class="f-1 fw-4"><span role="img" aria-label="X">❌</span> Does <strong>not</strong> respond to Program Change</p>
+          <% } %>
+          <% if (Object.entries(synth.midi.cc).length == 0) { %>
+            <p class="f-2 fw-4">No notable MIDI CCs</p>
+          <% } else { %>
+            <table class="collapse w-100">
+              <thead>
+                <tr>
+                  <th class="tl fw-8 pa-2 bb w-1 ws-nowrap">Param</th>
+                  <th class="tl fw-8 pa-2 bb">CC #</th>
+                </tr>
+              </thead>
+              <tbody>
+              <% for (const [param,ccNum] of Object.entries(synth.midi.cc)) { %>
+              <tr>
+                <td class="pa-2 bb w-1 ws-nowrap">
+                  <%= param %>
+                </td>
+                <td class="pa-2 bb fw-4 ff-mono">
+                  <%= ccNum %>
+                </td>
+              </tr>
+              <% }%>
+              </tbody>
+            </table>
+          <% } %>
+          <% if (typeof synth.midi.notes !== "undefined") { %>
+            <p class="f-2 fw-4"><%- synth.midi.notes %></p>
+          <% } %>
+        </details>
+      </section>
+    </main>
+    <footer class="bg-black-ish white-ish pv-4">
+      <p class="p mh-auto tc">Everything here is Copyright &copy; 2024 by David Bryant Copeland, Released under the <a class="purple-light" href="https://firstdonoharm.dev/version/2/1/license/">Hippocratic License, v2.1</a>.
+        <p class="p mh-auto tc">All of the code and content was created <a class="green-lighter" href="https://declare-ai.org/1.0.0/none.html">without any assistance from a generative AI</a>.
+    </footer>
+  </body>
+</html>

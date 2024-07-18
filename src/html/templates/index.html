@@ -1,23 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-<meta content="width=device-width,initial-scale=1" name="viewport">
-<link href="Copyright (c) 2019–2023 David Bryant Copeland, All Rights Reserved" rel="copyright">
-<title>Menu Diving WTF</title>
-<meta content="Quick Reference for common functions for Synths,  that you can read on a phone" name="description">
-<meta content="David Bryant Copeland" name="author">
-<meta content="Menu Diving WTF" name="og:title">
-<meta content="website" property="og:type">
-<link rel="icon" href="/synth-docs/favicon.ico" sizes="32x32">
-<link rel="icon" href="/synth-docs/images/icons/icon.png" type="image/png">
-<link rel="apple-touch-icon" href="/synth-docs/images/icons/icon-180.png">
-<link rel="manifest" href="/synth-docs/manifest.webmanifest">
-<meta itemprop="ai-content-declaration:version" content="1.0.0">
-<meta itemprop="ai-content-declaration:level" content="none">
-<link href="/synth-docs/css/styles.css" rel="stylesheet">
-<script src="/synth-docs/js/main.js"></script>
-
+    <%- include("head.html", { title: "Menu Diving WTF",
+                               description: "Quick Reference for common functions for Synths,  that you can read on a phone",
+                             }) %>
   </head>
   <body class="ff-sans">
     <header class="purple-lighter pv-4 bg-purple-dark">
@@ -37,15 +23,11 @@
     <main class="bg-purple-darkest purple-lightest">
       <div class="mh-auto w-90 w-50-ns ff-sans pv-3">
         <ul>
-          
+          <% outputFiles.forEach( (outputFile) => { %>
           <li><p class="p">
-              <a class="yellow-light" href="synths/arturia-drumbrute-impact.html">Arturia Drumbrute Impact</a>
+              <a class="yellow-light" href="<%= outputFile.relativePath %>"><%= outputFile.synth.name %></a>
           </p></li>
-          
-          <li><p class="p">
-              <a class="yellow-light" href="synths/korg-volca-drum.html">Korg Volca Drum</a>
-          </p></li>
-          
+          <% }) %>
         </ul>
       </div>
     </main>
