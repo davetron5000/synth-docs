@@ -6,81 +6,81 @@
     "features": {
       "All Notes Off": {
         "steps": [
-          "Press <span class='synth-button'>⏹️</span> quickly three times in a row"
+          "Press <synth-button>⏹️</synth-button> quickly three times in a row"
         ]
       },
       "Copy Instrument Pattern": {
         "steps": [
-          "Press <span class='synth-button'>Copy</span>",
+          "Press <synth-button>Copy</synth-button>",
           "Press the pad of the instrument to copy from",
-          "Optionally, press <span class='synth-button'>Bank</span> and then a target bank",
-          "Optionally, press <span class='synth-button'>Pattern</span> and then a target pattern",
+          "Optionally, press <synth-button>Bank</synth-button> and then a target bank",
+          "Optionally, press <synth-button>Pattern</synth-button> and then a target pattern",
           "Press the pad of the instrument to copy to"
         ]
       },
       "Copy Entire Pattern": {
         "steps": [
           "Select the pattern to copy from",
-          "Press <span class='synth-button'>Copy</span>",
+          "Press <synth-button>Copy</synth-button>",
           "Press the step for the pattern to copy to"
         ]
       },
       "Extend Pattern, blank data": {
         "steps": [
           "Select the pattern",
-          "Hold <span class='synth-button'>Last Step</span>, then press <span class='synth-button'>»</span> to select the 16-step portion of the 64-step pattern",
+          "Hold <synth-button>Last Step</synth-button>, then press <synth-button>»</synth-button> to select the 16-step portion of the 64-step pattern",
           "Press step button 1–16 to set the last step of that 16-step portion"
         ]
       },
       "Extend Pattern, copying data": {
         "steps": [
           "Select the pattern",
-          "Hold <span class='synth-button'>Shift</span> and press <span class='synth-button'>»</span>"
+          "Hold <synth-button>Shift</synth-button> and press <synth-button>»</synth-button>"
         ]
       },
       "Mute Instruments / Parts": {
         "steps": [
-          "Tap <span class='synth-button'>Mute</span>",
+          "Tap <synth-button>Mute</synth-button>",
           "Tap the instrument/part to mute or unmute",
-          "Tapping <span class='synth-button'>Mute</span> again will unmute everything",
-          "Tapping <span class='synth-button'>Mute</span> again re-mute what was muted previously",
-          "Hold <span class='synth-button'>Shift</span> and tap <span class='synth-button'>Mute</span> to clear all solo'ed instruments from the group"
+          "Tapping <synth-button>Mute</synth-button> again will unmute everything",
+          "Tapping <synth-button>Mute</synth-button> again re-mute what was muted previously",
+          "Hold <synth-button>Shift</synth-button> and tap <synth-button>Mute</synth-button> to clear all solo'ed instruments from the group"
         ],
         "notes": "This is the behavior when in <em>Toggle</em> mode, which is set in MIDI Control Center"
       },
       "Polyrhythms / Step Count Per Instrument": {
         "steps": [
-          "Hold <span class='synth-button'>Shift</span> and tap <span class='synth-button'>16</span> to enable Polyrhythms for the pattern (if needed)",
+          "Hold <synth-button>Shift</synth-button> and tap <synth-button>16</synth-button> to enable Polyrhythms for the pattern (if needed)",
           "Tap one of the pads to configure its pattern length",
-          "Tap <span class='synth-button'>Step</span> to enter step edit mode",
-          "Hold <span class='synth-button'>Last Step</span> and tap one of the buttons 1–16 to set the last step for that instrument"
+          "Tap <synth-button>Step</synth-button> to enter step edit mode",
+          "Hold <synth-button>Last Step</synth-button> and tap one of the buttons 1–16 to set the last step for that instrument"
         ]
       },
       "Random for Instrument": {
         "steps": [
           "Tap the instrument/part to edit (button 1–6)",
-          "Tap <span class='synth-button'>Current Track</span>, next to the <span class='synth-knob'>Random</span> knob.",
-          "Adjust <span class='synth-knob'>Random</span> to add random behavior to that track."
+          "Tap <synth-button>Current Track</synth-button>, next to the <synth-knob>Random</synth-knob> knob.",
+          "Adjust <synth-knob>Random</synth-knob> to add random behavior to that track."
         ]
       },
       "Random for Pattern": {
         "steps": [
-          "If lit, tap <span class='synth-button'>Current Track</span>, next to the <span class='synth-knob'>Random</span> knob so that it's unlit.",
-          "Adjust <span class='synth-knob'>Random</span> to add random behavior to the pattern."
+          "If lit, tap <synth-button>Current Track</synth-button>, next to the <synth-knob>Random</synth-knob> knob so that it's unlit.",
+          "Adjust <synth-knob>Random</synth-knob> to add random behavior to the pattern."
         ]
       },
       "Ratchet or Flam Steps": {
         "steps": [
           "Tap the instrument to edit",
           "Hold down a step button 1–16",
-          "Tap the Roller to set the repeat: <ul><li class='p'><span class='synth-button synth-button-narrow'><sup>1</sup>&frasl;<sub>4</sub></span> for 1 trigger</li><li class='p'><span class='synth-button synth-button-narrow'><sup>1</sup>&frasl;<sub>8</sub></span> for 2 triggers</li><li class='p'><span class='synth-button synth-button-narrow'><sup>1</sup>&frasl;<sub>16</sub></span> for 3 triggers</li><li class='p'><span class='synth-button synth-button-narrow'><sup>1</sup>&frasl;<sub>32</sub></span> for 4 triggers</li></ul>"
+          "Tap the Roller to set the repeat: <ul><li class='p'><synth-button narrow><sup>1</sup>&frasl;<sub>4</sub></synth-button> for 1 trigger</li><li class='p'><synth-button narrow><sup>1</sup>&frasl;<sub>8</sub></synth-button> for 2 triggers</li><li class='p'><synth-button narrow><sup>1</sup>&frasl;<sub>16</sub></synth-button> for 3 triggers</li><li class='p'><synth-button narrow><sup>1</sup>&frasl;<sub>32</sub></synth-button> for 4 triggers</li></ul>"
         ],
         "notes": "When holding down the step, the light above the Roller indicates the current state"
       },
       "Roll Instrument (Roller)": {
         "steps": [
-          "Press <span class='synth-button'>▶️</span> to start playback",
-          "Hold <span class='synth-button'>Shift</span> and tap <span class='synth-button synth-button-narrow'>9</span> so that the button is <strong>lit</strong>",
+          "Press <synth-button>▶️</synth-button> to start playback",
+          "Hold <synth-button>Shift</synth-button> and tap <synth-button class='synth-button synth-button-narrow'>9</synth-button> so that the button is <strong>lit</strong>",
           "Hold down one of the four buttons in the Touch Strip",
           "Tap and hold an instrument button to roll that instrument"
         ],
@@ -88,18 +88,18 @@
       },
       "Solo Instruments / Parts": {
         "steps": [
-          "Tap <span class='synth-button'>Solo</span>",
+          "Tap <synth-button>Solo</synth-button>",
           "Tap the instrument/part to solo or remove from solo group",
-          "Tapping <span class='synth-button'>Solo</span> again will unmute everything",
-          "Tapping <span class='synth-button'>Solo</span> again re-solo what was solo'ed previously",
-          "Hold <span class='synth-button'>Shift</span> and tap <span class='synth-button'>Solo</span> to clear all solo'ed instruments from the group"
+          "Tapping <synth-button>Solo</synth-button> again will unmute everything",
+          "Tapping <synth-button>Solo</synth-button> again re-solo what was solo'ed previously",
+          "Hold <synth-button>Shift</synth-button> and tap <synth-button>Solo</synth-button> to clear all solo'ed instruments from the group"
         ],
         "notes": "This is the behavior when in <em>Toggle</em> mode, which is set in MIDI Control Center"
       },
       "Step Repeat (Looper)": {
         "steps": [
-          "Press <span class='synth-button'>▶️</span> to start playback",
-          "Hold <span class='synth-button'>Shift</span> and tap <span class='synth-button synth-button-narrow'>9</span> so that the button is <strong>unlit</strong>",
+          "Press <synth-button>▶️</synth-button> to start playback",
+          "Hold <synth-button>Shift</synth-button> and tap <synth-button class='synth-button synth-button-narrow'>9</synth-button> so that the button is <strong>unlit</strong>",
           "Hold down one of the four buttons in the Touch Strip",
           "Tap and hold a step button to repeat the pattern from that step"
         ],
@@ -108,12 +108,12 @@
       "Time Division": {
         "steps": [
           "Select the pattern to modify",
-          "Hold <span class='synth-button'>Shift</span> and tap 1–5 to change the timing of steps. Refer to the blue labels"
+          "Hold <synth-button>Shift</synth-button> and tap 1–5 to change the timing of steps. Refer to the blue labels"
         ]
       }
     },
     "notes": [
-      "You must hit <span class='synth-button'>Sync</span> to select MIDI if using MIDI. Every. Single. Time.",
+      "You must hit <synth-button>Sync</synth-button> to select MIDI if using MIDI. Every. Single. Time.",
       "Closed HH will choke Open HH",
       "When cable is plugged into individual out, it's removed from the main out and headphones out",
       "Distortion only applies to instruments sent into Main out, not anything on individual outs"

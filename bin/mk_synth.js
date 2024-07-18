@@ -72,7 +72,10 @@ const run = (args) => {
   }
 
   if (values.root && values.root[values.root.length - 1] == "/") {
-    values.root = values.root.slice(0,-1)
+    values.root = values.root.slice(0,-1) || ""
+  }
+  else if (!values.root) {
+    values.root = ""
   }
 
   return values
@@ -185,7 +188,7 @@ try {
       outputRoot: options.outputRoot,
       outputDirInRoot: options.outputDirInRoot,
       synth: synth,
-      rootUrl: options.root || "/",
+      rootUrl: options.root,
       template: options.template,
     })
   }).sort( (a,b) => {

@@ -1,0 +1,198 @@
+{
+  "synth": {
+    "name": "create8audio East Beast",
+    "firmware": "1.5",
+    "manualLink": "https://www.cre8audio.com/firmware-and-software",
+    "features": {
+      "Clock Divider": {
+        "steps": [
+          {
+            "step": "While holding down <synth-button>Blue</synth-button> keep pressing <synth-button narrow>F#</synth-button> until you've selected the division, based on the following values of the four leds:",
+            "details": [
+              [ "Division", "LEDs" ],
+              [ "÷ 1", "<synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>" ],
+              [ "÷ 2", "<synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>" ],
+              [ "÷ 3", "<synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>" ],
+              [ "÷ 4", "<synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led>" ]
+            ]
+          }
+        ],
+        "notes": "Clock Source must be MIDI or External Gate for this to have any effect"
+      },
+      "Clock Source": {
+        "steps": [
+          {
+            "step": "While holding down <synth-button>Green</synth-button> keep pressing <synth-button narrow>F#</synth-button> until you've selected the source, based on the following values of the four leds:",
+            "details": [
+              [ "Source", "LEDs" ],
+              [ "Internal",      "<synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>" ],
+              [ "MIDI",          "<synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>" ],
+              [ "External Gate", "<synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>" ],
+              [ "Random",        "<synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led>" ]
+            ]
+          }
+        ]
+      },
+      "MIDI Channel": {
+        "steps": [
+          {
+            "step": "While holding down <synth-button>Green</synth-button> keep pressing <synth-button narrow>G#</synth-button> until the channel is set, based on the following values of the four leds:",
+            "details": [
+              [ "Channel", "LEDs" ],
+              [ "1",    "<synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>" ],
+              [ "2",    "<synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>" ],
+              [ "3",    "<synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>" ],
+              [ "4",    "<synth-led lit></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>" ],
+              [ "5",    "<synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>" ],
+              [ "6",    "<synth-led lit></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>" ],
+              [ "7",    "<synth-led    ></synth-led><synth-led lit></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>" ],
+              [ "8",    "<synth-led lit></synth-led><synth-led lit></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>" ],
+              [ "9",    "<synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led>" ],
+              [ "10",   "<synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led>" ],
+              [ "11",   "<synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led lit></synth-led>" ],
+              [ "12",   "<synth-led lit></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led lit></synth-led>" ],
+              [ "13",   "<synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led lit></synth-led>" ],
+              [ "14",   "<synth-led lit></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led lit></synth-led>" ],
+              [ "15",   "<synth-led    ></synth-led><synth-led lit></synth-led><synth-led lit></synth-led><synth-led lit></synth-led>" ],
+              [ "16",   "<synth-led lit></synth-led><synth-led lit></synth-led><synth-led lit></synth-led><synth-led lit></synth-led>" ],
+              [ "Omni", "<div><synth-led lit></synth-led><synth-led></synth-led><synth-led lit></synth-led><synth-led></synth-led></div><div><synth-led></synth-led><synth-led lit></synth-led><synth-led></synth-led><synth-led lit></synth-led></div>(flashing)" ]
+            ]
+          }
+        ],
+        "notes": "If interpreted as binary numbers written backward, the binary number is one less than the MIDI channel it corresponds to."
+      },
+      "Multi Output": {
+        "steps": [
+          {
+            "step": "While holding down <synth-button>Green</synth-button> keep pressing <synth-button narrow>A#</synth-button> until you've selected what you want multi to do, based on the following values of the four leds:",
+            "details": [
+              [ "Function", "LEDs" ],
+              [ "Quantized Voltage", "<synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>" ],
+              [ "Triangle LFO",      "<synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>" ],
+              [ "Random Voltage",    "<synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>" ],
+              [ "Decay Envelope",    "<synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led>" ]
+            ]
+          },
+          "To change the CC that can control the CV output, hold down <synth-button>Green</synth-button> <strong>and</strong> hold down <synth-button narrow>A#</synth-button>, then send a CC value on the selected MIDI Channel (e.g. move the mod wheel of your controller)."
+        ],
+        "notes": "There is no way to view the selected CC once it has been set"
+      },
+      "Multi Output - Quantized Voltage Config": {
+        "steps": [
+          {
+            "step": "While holding down <synth-button>Blue</synth-button> keep pressing <synth-button narrow>A#</synth-button> until you've selected the levels per volt (based on CC or mod wheel):",
+            "details": [
+              [ "Levels/volt", "LEDs" ],
+              [ "Unquantized",
+                "<synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>" ],
+              [ "48 (<sup>1</sup>&frasl;<sub>4</sub> semitone)",
+                "<synth-led lit></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>" ],
+              [ "24 (<sup>1</sup>&frasl;<sub>2</sub> semitone)",
+                "<synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>" ],
+              [ "16 (<sup>2</sup>&frasl;<sub>3</sub> semitone)",
+                "<synth-led    ></synth-led><synth-led lit></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>" ],
+              [ "12 (1 semitone)",
+                "<synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>" ],
+              [ "8 (1<sup>1</sup>&frasl;<sub>2</sub> semitones)",
+                "<synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led lit></synth-led>" ],
+              [ "4 (3 semitones)",
+                "<synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led>" ],
+              [ "2 (6 semitones)",
+                "<synth-led lit></synth-led><synth-led lit></synth-led><synth-led lit></synth-led><synth-led lit></synth-led>" ]
+            ]
+          }
+        ]
+      },
+      "Multi Output - Synced LFO Config": {
+        "steps": [
+          {
+            "step": "While holding down <synth-button>Blue</synth-button> keep pressing <synth-button narrow>A#</synth-button> until you've selected the # of cycles per clock",
+            "details": [
+              [ "<sup>Cycles</sup>&frasl;<sub>Clock</sub>", "LEDs", "Notes" ],
+              [ "<sup>3</sup>&frasl;<sub>1</sub>",
+                "<synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>", "fastest" ],
+              [ "<sup>2</sup>&frasl;<sub>1</sub>",
+                "<synth-led lit></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>", "" ],
+              [ "<sup>1</sup>&frasl;<sub>1</sub>",
+                "<synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>", "on beat" ],
+              [ "<sup>1</sup>&frasl;<sub>2</sub>",
+                "<synth-led    ></synth-led><synth-led lit></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>", "" ],
+              [ "<sup>1</sup>&frasl;<sub>3</sub>",
+                "<synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>", "" ],
+              [ "<sup>1</sup>&frasl;<sub>4</sub>",
+                "<synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led lit></synth-led>", "" ],
+              [ "<sup>1</sup>&frasl;<sub>6</sub>",
+                "<synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led>", "" ],
+              [ "<sup>1</sup>&frasl;<sub>8</sub>",
+                "<synth-led lit></synth-led><synth-led lit></synth-led><synth-led lit></synth-led><synth-led lit></synth-led>", "slowest" ]
+            ]
+          }
+        ],
+        "notes": "MIDI CC will control the amplitude of the triangle"
+      },
+      "Multi Output - Random Voltage Config": {
+        "steps": [
+          {
+            "step": "While holding down <synth-button>Blue</synth-button> keep pressing <synth-button narrow>A#</synth-button> until you've selected the number of values per clock:",
+            "details": [
+              [ "<sup>Voltages</sup>&frasl;<sub>Clock</sub>", "LEDs", "Notes" ],
+              [ "<sup>4</sup>&frasl;<sub>1</sub>",
+                "<synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>", "fastest" ],
+              [ "<sup>3</sup>&frasl;<sub>1</sub>",
+                "<synth-led lit></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>", "" ],
+              [ "<sup>2</sup>&frasl;<sub>1</sub>",
+                "<synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>", "" ],
+              [ "<sup>1</sup>&frasl;<sub>1</sub>",
+                "<synth-led    ></synth-led><synth-led lit></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>", "on beat" ],
+              [ "<sup>1</sup>&frasl;<sub>2</sub>",
+                "<synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>", "" ],
+              [ "<sup>1</sup>&frasl;<sub>3</sub>",
+                "<synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led lit></synth-led>", "" ],
+              [ "<sup>1</sup>&frasl;<sub>4</sub>",
+                "<synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led>", "" ],
+              [ "<sup>1</sup>&frasl;<sub>8</sub>",
+                "<synth-led lit></synth-led><synth-led lit></synth-led><synth-led lit></synth-led><synth-led lit></synth-led>", "slowest" ]
+            ]
+          }
+        ],
+        "notes": "MIDI CC will control the range of the random voltages"
+      },
+      "Multi Output - Decay Envelope Config": {
+        "steps": [
+          {
+            "step": "While holding down <synth-button>Blue</synth-button> keep pressing <synth-button narrow>A#</synth-button> until you've selected the decay value you want:",
+            "details": [
+              [ "ms", "LEDs" ],
+              [ "60",
+                "<synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>" ],
+              [ "120",
+                "<synth-led lit></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>" ],
+              [ "240",
+                "<synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>" ],
+              [ "450",
+                "<synth-led    ></synth-led><synth-led lit></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>" ],
+              [ "900",
+                "<synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>" ],
+              [ "1800",
+                "<synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led lit></synth-led>" ],
+              [ "2600",
+                "<synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led>" ],
+              [ "7200",
+                "<synth-led lit></synth-led><synth-led lit></synth-led><synth-led lit></synth-led><synth-led lit></synth-led>" ]
+            ]
+          }
+        ],
+        "notes": "MIDI CC will control the height of the envelope"
+      }
+    },
+    "notes": [
+      "MIDI CC cannot be cleared, so make sure whatever you set it to, you've sent the max value. Otherwise, the multi will appear not to work",
+      "Voltages within Eurorack guides (±12V) will not damage the unit",
+      "Most CV inputs are set to 'top out' at +5V, but can receive higher voltages"
+    ],
+    "midi": {
+      "programChange": false,
+      "cc": { }
+    }
+  }
+}

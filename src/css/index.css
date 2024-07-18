@@ -15,7 +15,7 @@ details summary > * {
   display: inline;
 }
 
-.synth-button {
+synth-button {
   border: solid thin;
   display: inline-block;
   padding-top: calc(0.5 * var(--mg-sp-1));
@@ -30,7 +30,7 @@ details summary > * {
   text-align: center;
   background-color: rgba(255,255,255,0.15);
 }
-.synth-button.synth-button-narrow {
+synth-button[narrow] {
   min-width:  var(--mg-sp-3);
 }
 
@@ -43,7 +43,7 @@ details.feature-doc:nth-child(odd) {
   color: var(--mg-purple-lighter)
 }
 
-.synth-knob {
+synth-knob {
   border: solid thin;
   display: inline-block;
   padding-left: var(--mg-sp-1);
@@ -55,4 +55,20 @@ details.feature-doc:nth-child(odd) {
   font-weight: 600;
   border-radius: var(--mg-bw-5);
   background-color: rgba(255,255,255,0.15);
+}
+
+
+synth-led {
+  width: var(--mg-sp-3);
+  height: var(--mg-sp-3);
+  border: solid thin var(--mg-yellow-lighter);
+  border-radius: 100%;
+  background-color: var(--mg-yellow-darkest);
+  display: inline-block;
+  margin-left: var(--mg-sp-1);
+  margin-right: var(--mg-sp-1);
+}
+
+synth-led[lit] {
+  background-color: var(--mg-yellow-lighter);
 }

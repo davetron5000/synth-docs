@@ -41,10 +41,36 @@
             </summary>
             <ol>
               <% feature.steps.forEach( (step) => { %>
-              <li><p class="p">
-                <%- step %>
-                </p></li>
-              <% })%>
+                <li>
+                  <% if (step.step) { %>
+                    <p class="p"><%- step.step %></p>
+                    <table class="collapse w-100">
+                      <thead>
+                        <tr>
+                          <% step.details[0].forEach( (header) => { %>
+                            <th class="tl pa-2 bb bw-1"><%- header %></th>
+                          <% }) %>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% step.details.slice(1).forEach( (row) => { %>
+                          <tr>
+                            <% row.forEach( (cell, index) => { %>
+                              <td class="pa-2 bb <%= index == 0 ? 'w-1 ws-nowrap' : '' %>">
+                                <%- cell %>
+                              </td>
+                            <% }) %>
+                          </tr>
+                        <% }) %>
+                      </tbody>
+                    </table>
+                  <% } else { %>
+                    <p class="p">
+                      <%- step %>
+                    </p>
+                  <% } %>
+                </li>
+              <% }) %>
             </ol>
             <% if (typeof feature.notes !== "undefined") { %>
             <p class="f-1 i measure-wide ph-3"><%- feature.notes %></p>
@@ -59,10 +85,12 @@
               <h3 class="f-4 tdu">Notes and Non-Obvious Behaviors</h3>
             </summary>
             <ul>
-              <% synth.notes.forEach( (step) => { %>
-              <li><p class="p">
-                <%- step %>
-                </p></li>
+              <% synth.notes.forEach( (note) => { %>
+                <li>
+                    <p class="p">
+                      <%- note %>
+                    </p>
+                </li>
               <% })%>
             </ul>
           </details>
