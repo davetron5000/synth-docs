@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<link href="Copyright (c) 2019–2023 David Bryant Copeland, All Rights Reserved" rel="copyright">
+<title>Menu Diving | Arturia Keystep 37</title>
+<meta content="Menu Diving Support for Arturia Keystep 37" name="description">
+<meta content="David Bryant Copeland" name="author">
+<meta content="Menu Diving | Arturia Keystep 37" name="og:title">
+<meta content="website" property="og:type">
+<link rel="icon" href="/synth-docs/favicon.ico" sizes="32x32">
+<link rel="icon" href="/synth-docs/images/icons/icon.png" type="image/png">
+<link rel="apple-touch-icon" href="/synth-docs/images/icons/icon-180.png">
+<link rel="manifest" href="/synth-docs/manifest.webmanifest">
+<meta itemprop="ai-content-declaration:version" content="1.0.0">
+<meta itemprop="ai-content-declaration:level" content="none">
+<link href="/synth-docs/css/styles.css" rel="stylesheet">
+<script src="/synth-docs/js/main.js"></script>
+
+  </head>
+  <body class="ff-sans">
+    <header class="purple-lighter pv-4 bg-purple-dark">
+      <div class="mh-auto w-90 w-50-ns flex items-center gap-3">
+        <div>
+          <h1 class="f-5 ma-0 lh-title"><a href="/" class="purple-lighter">menudiving.wtf</a></h1>
+          <h2 class="f-7 ma-0 mt-1 lh-title">
+            <div>
+            Arturia Keystep 37
+            </div>
+            
+            <small class="db f-4">
+              <span role="image" aria-description="floppy disk">💾</span>
+              Firmware 1.1.6.579
+            </small>
+            
+          </h2>
+          
+          <a class="db gray-lightest mt-3" href="https://www.arturia.com/products/hybrid-synths/keystep-37/resources"><span role="img" aria-description="open book">📖</span> Official Manual</a>
+          
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="mh-auto w-100 w-50-ns ff-sans mh-2">
+        <h3 class="sr-only">Features</h3>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Chord / Strum Mode</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      Hold <synth-button>Shift</synth-button> and press <synth-button>Hold</synth-button>. <synth-button>Chord</synth-button> will become orange and <synth-button>Hold</synth-button> will blink
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Rotate <synth-knob>1 / Type</synth-knob> to choose the chord
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Hit single keys on the keyboard to trigger that chord
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Rotate <synth-knob>2 / Notes</synth-knob> to add more notes to the chord
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">Rotate <synth-knob>3 / Vel &gt; Notes</synth-knob> to adjust how many notes are played based on velocity:</p>
+                    <table class="collapse w-100">
+                      <thead>
+                        <tr>
+                          
+                            <th class="tl pa-2 bb bw-1">Value</th>
+                          
+                            <th class="tl pa-2 bb bw-1"># of Notes</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                0%
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                All notes no matter what
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                50%
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                About <sup>1</sup>&frasl;<sub>2</sub> at low velocity, all at high
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                99%
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Only the root at low velocity, all at high
+                              </td>
+                            
+                          </tr>
+                        
+                      </tbody>
+                    </table>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Rotate <synth-knob>4 / Strum</synth-knob> to strum the values instead of playing chords
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+            <p class="f-1 i measure-wide ph-3">The more notes in your chord, the more this affect is noticeable</p>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Control Mode / Using the Knobs</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      By default, <synth-knob>1 / Type</synth-knob>, <synth-knob>2 / Notes</synth-knob>, <synth-knob>3 / Vel &gt; Notes</synth-knob>, and <synth-knob>4 / Strum</synth-knob> will control the first bank of MIDI CC's you've configured in MIDI Control Center
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Tap <synth-button>Chord</synth-button> to advance to Bank 2
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Repeat to advance to Banks 3 and then 4
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+            <p class="f-1 i measure-wide ph-3">When <synth-button>Chord</synth-button> is orange, you are in Chord Mode, and the knobs don't send CCs</p>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Setting a User Chord</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      Hold down <synth-button>Chord</synth-button> and play a chord
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      You should now be in Chord Mode and can play your chord with one note
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Step Recording</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      Set <synth-switch>Mode</synth-switch> to “Seq”
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Rotate <synth-knob>Mode</synth-knob> to 1–8, depending on what sequence you want to overwrite
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press and release <synth-button narrow>⏺</synth-button>
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Hold <synth-button narrow>⏺</synth-button>, then press a key on the keyboard between 1 and 16 (blue labels) to set the number of steps
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Repeat the previous step to “add” steps to the sequence
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Hold down one or more keys
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      To create a step, release the keys
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      To create a longer step (ties), press <synth-button>Tap</synth-button> once for each additional step to tie
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Release the keys
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Tap <synth-button>Tap</synth-button> to enter a rest instead of a note
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Tap <synth-button narrow>⏹️</synth-button> when done
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Step Recording w/ Legato</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      Start a Step Recording
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Hold down <synth-button>Tap</synth-button>
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Play notes as if step recording
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Release <synth-button>Tap</synth-button>
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+            <p class="f-1 i measure-wide ph-3">These notes won't trigger new gate events</p>
+            
+          </details>
+        
+      </section>
+      <section class="mh-auto w-100 w-50-ns ff-sans mh-2">
+        
+          <details class="bg-yellow-darker yellow-lightest pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h3 class="f-4 tdu">Notes and Non-Obvious Behaviors</h3>
+            </summary>
+            <ul>
+              
+                <li>
+                    <p class="p">
+                      Recommend keep program 8 clear so you can safely hit play and not hear some random sequence
+                    </p>
+                </li>
+              
+            </ul>
+          </details>
+        
+        <details class="bg-yellow-lighest yellow-darker pa-2">
+          <summary class="ma-0 f-4 lh-title pv-2">
+            <h3 class="f-4 tdu">MIDI Info &amp; CCs</h3>
+          </summary>
+          
+            <p class="f-1 fw-4"><span role="img" aria-label="X">❌</span> Does <strong>not</strong> respond to Program Change</p>
+          
+          
+            <p class="f-2 fw-4">No notable MIDI CCs</p>
+          
+          
+        </details>
+      </section>
+    </main>
+    <footer class="bg-black-ish white-ish pv-4">
+      <p class="p mh-auto tc">Everything here is Copyright &copy; 2024 by David Bryant Copeland, Released under the <a class="purple-light" href="https://firstdonoharm.dev/version/2/1/license/">Hippocratic License, v2.1</a>.
+        <p class="p mh-auto tc">All of the code and content was created <a class="green-lighter" href="https://declare-ai.org/1.0.0/none.html">without any assistance from a generative AI</a>.
+    </footer>
+  </body>
+</html>

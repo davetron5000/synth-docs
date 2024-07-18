@@ -1,0 +1,1157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<link href="Copyright (c) 2019–2023 David Bryant Copeland, All Rights Reserved" rel="copyright">
+<title>Menu Diving | create8audio East Beast</title>
+<meta content="Menu Diving Support for create8audio East Beast" name="description">
+<meta content="David Bryant Copeland" name="author">
+<meta content="Menu Diving | create8audio East Beast" name="og:title">
+<meta content="website" property="og:type">
+<link rel="icon" href="/synth-docs/favicon.ico" sizes="32x32">
+<link rel="icon" href="/synth-docs/images/icons/icon.png" type="image/png">
+<link rel="apple-touch-icon" href="/synth-docs/images/icons/icon-180.png">
+<link rel="manifest" href="/synth-docs/manifest.webmanifest">
+<meta itemprop="ai-content-declaration:version" content="1.0.0">
+<meta itemprop="ai-content-declaration:level" content="none">
+<link href="/synth-docs/css/styles.css" rel="stylesheet">
+<script src="/synth-docs/js/main.js"></script>
+
+  </head>
+  <body class="ff-sans">
+    <header class="purple-lighter pv-4 bg-purple-dark">
+      <div class="mh-auto w-90 w-50-ns flex items-center gap-3">
+        <div>
+          <h1 class="f-5 ma-0 lh-title"><a href="/" class="purple-lighter">menudiving.wtf</a></h1>
+          <h2 class="f-7 ma-0 mt-1 lh-title">
+            <div>
+            create8audio East Beast
+            </div>
+            
+            <small class="db f-4">
+              <span role="image" aria-description="floppy disk">💾</span>
+              Firmware 1.5
+            </small>
+            
+          </h2>
+          
+          <a class="db gray-lightest mt-3" href="https://www.cre8audio.com/firmware-and-software"><span role="img" aria-description="open book">📖</span> Official Manual</a>
+          
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="mh-auto w-100 w-50-ns ff-sans mh-2">
+        <h3 class="sr-only">Features</h3>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Clock Divider</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">While holding down <synth-button>Blue</synth-button> keep pressing <synth-button narrow>F#</synth-button> until you've selected the division, based on the following values of the four leds:</p>
+                    <table class="collapse w-100">
+                      <thead>
+                        <tr>
+                          
+                            <th class="tl pa-2 bb bw-1">Division</th>
+                          
+                            <th class="tl pa-2 bb bw-1">LEDs</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                ÷ 1
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                ÷ 2
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                ÷ 3
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                ÷ 4
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                      </tbody>
+                    </table>
+                  
+                </li>
+              
+            </ol>
+            
+            <p class="f-1 i measure-wide ph-3">Clock Source must be MIDI or External Gate for this to have any effect</p>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Clock Source</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">While holding down <synth-button>Green</synth-button> keep pressing <synth-button narrow>F#</synth-button> until you've selected the source, based on the following values of the four leds:</p>
+                    <table class="collapse w-100">
+                      <thead>
+                        <tr>
+                          
+                            <th class="tl pa-2 bb bw-1">Source</th>
+                          
+                            <th class="tl pa-2 bb bw-1">LEDs</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                Internal
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                MIDI
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                External Gate
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                Random
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                      </tbody>
+                    </table>
+                  
+                </li>
+              
+            </ol>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">MIDI Channel</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">While holding down <synth-button>Green</synth-button> keep pressing <synth-button narrow>G#</synth-button> until the channel is set, based on the following values of the four leds:</p>
+                    <table class="collapse w-100">
+                      <thead>
+                        <tr>
+                          
+                            <th class="tl pa-2 bb bw-1">Channel</th>
+                          
+                            <th class="tl pa-2 bb bw-1">LEDs</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                1
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                2
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                3
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                4
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led lit></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                5
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                6
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led lit></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                7
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led lit></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                8
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led lit></synth-led><synth-led lit></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                9
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                10
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                11
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led lit></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                12
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led lit></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led lit></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                13
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led lit></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                14
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led lit></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led lit></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                15
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led lit></synth-led><synth-led lit></synth-led><synth-led lit></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                16
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led lit></synth-led><synth-led lit></synth-led><synth-led lit></synth-led><synth-led lit></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                Omni
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <div><synth-led lit></synth-led><synth-led></synth-led><synth-led lit></synth-led><synth-led></synth-led></div><div><synth-led></synth-led><synth-led lit></synth-led><synth-led></synth-led><synth-led lit></synth-led></div>(flashing)
+                              </td>
+                            
+                          </tr>
+                        
+                      </tbody>
+                    </table>
+                  
+                </li>
+              
+            </ol>
+            
+            <p class="f-1 i measure-wide ph-3">If interpreted as binary numbers written backward, the binary number is one less than the MIDI channel it corresponds to.</p>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Multi Output</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">While holding down <synth-button>Green</synth-button> keep pressing <synth-button narrow>A#</synth-button> until you've selected what you want multi to do, based on the following values of the four leds:</p>
+                    <table class="collapse w-100">
+                      <thead>
+                        <tr>
+                          
+                            <th class="tl pa-2 bb bw-1">Function</th>
+                          
+                            <th class="tl pa-2 bb bw-1">LEDs</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                Quantized Voltage
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                Triangle LFO
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                Random Voltage
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                Decay Envelope
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                      </tbody>
+                    </table>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      To change the CC that can control the CV output, hold down <synth-button>Green</synth-button> <strong>and</strong> hold down <synth-button narrow>A#</synth-button>, then send a CC value on the selected MIDI Channel (e.g. move the mod wheel of your controller).
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+            <p class="f-1 i measure-wide ph-3">There is no way to view the selected CC once it has been set</p>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Multi Output - Decay Envelope Config</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">While holding down <synth-button>Blue</synth-button> keep pressing <synth-button narrow>A#</synth-button> until you've selected the decay value you want:</p>
+                    <table class="collapse w-100">
+                      <thead>
+                        <tr>
+                          
+                            <th class="tl pa-2 bb bw-1">ms</th>
+                          
+                            <th class="tl pa-2 bb bw-1">LEDs</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                60
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                120
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led lit></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                240
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                450
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led lit></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                900
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                1800
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led lit></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                2600
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                7200
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led lit></synth-led><synth-led lit></synth-led><synth-led lit></synth-led><synth-led lit></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                      </tbody>
+                    </table>
+                  
+                </li>
+              
+            </ol>
+            
+            <p class="f-1 i measure-wide ph-3">MIDI CC will control the height of the envelope</p>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Multi Output - Quantized Voltage Config</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">While holding down <synth-button>Blue</synth-button> keep pressing <synth-button narrow>A#</synth-button> until you've selected the levels per volt (based on CC or mod wheel):</p>
+                    <table class="collapse w-100">
+                      <thead>
+                        <tr>
+                          
+                            <th class="tl pa-2 bb bw-1">Levels/volt</th>
+                          
+                            <th class="tl pa-2 bb bw-1">LEDs</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                Unquantized
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                48 (<sup>1</sup>&frasl;<sub>4</sub> semitone)
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led lit></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                24 (<sup>1</sup>&frasl;<sub>2</sub> semitone)
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                16 (<sup>2</sup>&frasl;<sub>3</sub> semitone)
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led lit></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                12 (1 semitone)
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                8 (1<sup>1</sup>&frasl;<sub>2</sub> semitones)
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led lit></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                4 (3 semitones)
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                2 (6 semitones)
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led lit></synth-led><synth-led lit></synth-led><synth-led lit></synth-led><synth-led lit></synth-led>
+                              </td>
+                            
+                          </tr>
+                        
+                      </tbody>
+                    </table>
+                  
+                </li>
+              
+            </ol>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Multi Output - Random Voltage Config</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">While holding down <synth-button>Blue</synth-button> keep pressing <synth-button narrow>A#</synth-button> until you've selected the number of values per clock:</p>
+                    <table class="collapse w-100">
+                      <thead>
+                        <tr>
+                          
+                            <th class="tl pa-2 bb bw-1"><sup>Voltages</sup>&frasl;<sub>Clock</sub></th>
+                          
+                            <th class="tl pa-2 bb bw-1">LEDs</th>
+                          
+                            <th class="tl pa-2 bb bw-1">Notes</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                <sup>4</sup>&frasl;<sub>1</sub>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                fastest
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                <sup>3</sup>&frasl;<sub>1</sub>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led lit></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                <sup>2</sup>&frasl;<sub>1</sub>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                <sup>1</sup>&frasl;<sub>1</sub>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led lit></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                on beat
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                <sup>1</sup>&frasl;<sub>2</sub>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                <sup>1</sup>&frasl;<sub>3</sub>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led lit></synth-led>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                <sup>1</sup>&frasl;<sub>4</sub>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                <sup>1</sup>&frasl;<sub>8</sub>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led lit></synth-led><synth-led lit></synth-led><synth-led lit></synth-led><synth-led lit></synth-led>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                slowest
+                              </td>
+                            
+                          </tr>
+                        
+                      </tbody>
+                    </table>
+                  
+                </li>
+              
+            </ol>
+            
+            <p class="f-1 i measure-wide ph-3">MIDI CC will control the range of the random voltages</p>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Multi Output - Synced LFO Config</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">While holding down <synth-button>Blue</synth-button> keep pressing <synth-button narrow>A#</synth-button> until you've selected the # of cycles per clock</p>
+                    <table class="collapse w-100">
+                      <thead>
+                        <tr>
+                          
+                            <th class="tl pa-2 bb bw-1"><sup>Cycles</sup>&frasl;<sub>Clock</sub></th>
+                          
+                            <th class="tl pa-2 bb bw-1">LEDs</th>
+                          
+                            <th class="tl pa-2 bb bw-1">Notes</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                <sup>3</sup>&frasl;<sub>1</sub>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                fastest
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                <sup>2</sup>&frasl;<sub>1</sub>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led lit></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                <sup>1</sup>&frasl;<sub>1</sub>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                on beat
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                <sup>1</sup>&frasl;<sub>2</sub>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led lit></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                <sup>1</sup>&frasl;<sub>3</sub>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led    ></synth-led>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                <sup>1</sup>&frasl;<sub>4</sub>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led><synth-led lit></synth-led>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                <sup>1</sup>&frasl;<sub>6</sub>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led    ></synth-led><synth-led    ></synth-led><synth-led    ></synth-led><synth-led lit></synth-led>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                <sup>1</sup>&frasl;<sub>8</sub>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <synth-led lit></synth-led><synth-led lit></synth-led><synth-led lit></synth-led><synth-led lit></synth-led>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                slowest
+                              </td>
+                            
+                          </tr>
+                        
+                      </tbody>
+                    </table>
+                  
+                </li>
+              
+            </ol>
+            
+            <p class="f-1 i measure-wide ph-3">MIDI CC will control the amplitude of the triangle</p>
+            
+          </details>
+        
+      </section>
+      <section class="mh-auto w-100 w-50-ns ff-sans mh-2">
+        
+          <details class="bg-yellow-darker yellow-lightest pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h3 class="f-4 tdu">Notes and Non-Obvious Behaviors</h3>
+            </summary>
+            <ul>
+              
+                <li>
+                    <p class="p">
+                      MIDI CC cannot be cleared, so make sure whatever you set it to, you've sent the max value. Otherwise, the multi will appear not to work
+                    </p>
+                </li>
+              
+                <li>
+                    <p class="p">
+                      Voltages within Eurorack guides (±12V) will not damage the unit
+                    </p>
+                </li>
+              
+                <li>
+                    <p class="p">
+                      Most CV inputs are set to 'top out' at +5V, but can receive higher voltages
+                    </p>
+                </li>
+              
+            </ul>
+          </details>
+        
+        <details class="bg-yellow-lighest yellow-darker pa-2">
+          <summary class="ma-0 f-4 lh-title pv-2">
+            <h3 class="f-4 tdu">MIDI Info &amp; CCs</h3>
+          </summary>
+          
+            <p class="f-1 fw-4"><span role="img" aria-label="X">❌</span> Does <strong>not</strong> respond to Program Change</p>
+          
+          
+            <p class="f-2 fw-4">No notable MIDI CCs</p>
+          
+          
+        </details>
+      </section>
+    </main>
+    <footer class="bg-black-ish white-ish pv-4">
+      <p class="p mh-auto tc">Everything here is Copyright &copy; 2024 by David Bryant Copeland, Released under the <a class="purple-light" href="https://firstdonoharm.dev/version/2/1/license/">Hippocratic License, v2.1</a>.
+        <p class="p mh-auto tc">All of the code and content was created <a class="green-lighter" href="https://declare-ai.org/1.0.0/none.html">without any assistance from a generative AI</a>.
+    </footer>
+  </body>
+</html>
