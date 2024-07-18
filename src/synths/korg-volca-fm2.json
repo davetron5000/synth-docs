@@ -1,0 +1,32 @@
+{
+  "synth": {
+    "name": "Korg Volca FM2",
+    "firmware": "1.12",
+    "manualLink": "https://www.korg.com/us/support/download/product/0/892/",
+    "features": {
+      "MIDI Channel": {
+        "steps": [
+          "Turn off Volca",
+          "Hold down <synth-button>Memory</synth-button> and turn Volca on",
+          "Tap one of the 1–16 buttons to set the channel",
+          "Tap <synth-button>⏺</synth-button> to save the selection",
+          "Tap <synth-button>▶️</synth-button> to abort the change"
+        ]
+      },
+      "Programming": {
+        "steps": [
+          "LOLOLOLOLOOLLLLOLOLOL"
+        ]
+      }
+    },
+    "midi": {
+      "programChange": false,
+      "cc": {
+        "Velocity": "41",
+        "Chorus": "93",
+        "Reverb": "91"
+      },
+      "notes": "Must be on MIDI channel 1 to interact with various online editors"
+    }
+  }
+}
