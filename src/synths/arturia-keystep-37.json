@@ -1,0 +1,73 @@
+{
+  "synth": {
+    "name": "Arturia Keystep 37",
+    "firmware": "1.1.6.579",
+    "manualLink": "https://www.arturia.com/products/hybrid-synths/keystep-37/resources",
+    "features": {
+      "Chord / Strum Mode": {
+        "steps": [
+          "Hold <synth-button>Shift</synth-button> and press <synth-button>Hold</synth-button>. <synth-button>Chord</synth-button> will become orange and <synth-button>Hold</synth-button> will blink",
+          "Rotate <synth-knob>1 / Type</synth-knob> to choose the chord",
+          "Hit single keys on the keyboard to trigger that chord",
+          "Rotate <synth-knob>2 / Notes</synth-knob> to add more notes to the chord",
+          {
+            "step": "Rotate <synth-knob>3 / Vel &gt; Notes</synth-knob> to adjust how many notes are played based on velocity:",
+            "details": [
+              [ "Value", "# of Notes" ],
+              [ "0%", "All notes no matter what" ],
+              [ "50%", "About <sup>1</sup>&frasl;<sub>2</sub> at low velocity, all at high" ],
+              [ "99%", "Only the root at low velocity, all at high" ]
+            ]
+          },
+          "Rotate <synth-knob>4 / Strum</synth-knob> to strum the values instead of playing chords"
+        ],
+        "notes": "The more notes in your chord, the more this affect is noticeable"
+      },
+      "Setting a User Chord": {
+        "steps": [
+          "Hold down <synth-button>Chord</synth-button> and play a chord",
+          "You should now be in Chord Mode and can play your chord with one note"
+        ]
+      },
+      "Step Recording": {
+        "steps": [
+          "Set <synth-switch>Mode</synth-switch> to “Seq”",
+          "Rotate <synth-knob>Mode</synth-knob> to 1–8, depending on what sequence you want to overwrite",
+          "Press and release <synth-button narrow>⏺</synth-button>",
+          "Hold <synth-button narrow>⏺</synth-button>, then press a key on the keyboard between 1 and 16 (blue labels) to set the number of steps",
+          "Repeat the previous step to “add” steps to the sequence",
+          "Hold down one or more keys",
+          "To create a step, release the keys",
+          "To create a longer step (ties), press <synth-button>Tap</synth-button> once for each additional step to tie",
+          "Release the keys",
+          "Tap <synth-button>Tap</synth-button> to enter a rest instead of a note",
+          "Tap <synth-button narrow>⏹️</synth-button> when done"
+        ]
+      },
+      "Step Recording w/ Legato": {
+        "steps": [
+          "Start a Step Recording",
+          "Hold down <synth-button>Tap</synth-button>",
+          "Play notes as if step recording",
+          "Release <synth-button>Tap</synth-button>"
+        ],
+        "notes": "These notes won't trigger new gate events"
+      },
+      "Control Mode / Using the Knobs": {
+        "steps": [
+          "By default, <synth-knob>1 / Type</synth-knob>, <synth-knob>2 / Notes</synth-knob>, <synth-knob>3 / Vel &gt; Notes</synth-knob>, and <synth-knob>4 / Strum</synth-knob> will control the first bank of MIDI CC's you've configured in MIDI Control Center",
+          "Tap <synth-button>Chord</synth-button> to advance to Bank 2",
+          "Repeat to advance to Banks 3 and then 4"
+        ],
+        "notes": "When <synth-button>Chord</synth-button> is orange, you are in Chord Mode, and the knobs don't send CCs"
+      }
+    },
+    "notes": [
+      "Recommend keep program 8 clear so you can safely hit play and not hear some random sequence"
+    ],
+    "midi": {
+      "programChange": false,
+      "cc": {}
+    }
+  }
+}

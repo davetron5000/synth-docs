@@ -34,7 +34,7 @@
     <main>
       <section class="mh-auto w-100 w-50-ns ff-sans mh-2">
         <h3 class="sr-only">Features</h3>
-        <% for (const [featureName,feature] of Object.entries(synth.features)) { %>
+        <% Object.entries(synth.features).sort( (a,b) => a[0].localeCompare(b[0]) ).forEach( ([featureName,feature]) => { %>
           <details class="feature-doc pa-2">
             <summary class="ma-0 f-4 pv-2 lh-title">
               <h4 class="f-4 tdu"><%= featureName %></h4>
@@ -76,7 +76,7 @@
             <p class="f-1 i measure-wide ph-3"><%- feature.notes %></p>
             <% } %>
           </details>
-        <% } %>
+        <% }) %>
       </section>
       <section class="mh-auto w-100 w-50-ns ff-sans mh-2">
         <% if (synth.notes) { %>

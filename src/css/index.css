@@ -57,6 +57,17 @@ synth-knob {
   background-color: rgba(255,255,255,0.15);
 }
 
+synth-switch {
+  border: dotted thin;
+  display: inline-block;
+  padding: var(--mg-sp-1);
+  text-transform: uppercase;
+  letter-spacing: var(--mg-ls-tracked);
+  font-weight: 600;
+  border-top-left-radius: var(--mg-bw-3);
+  border-bottom-right-radius: var(--mg-bw-3);
+  background-color: rgba(255,255,255,0.15);
+}
 
 synth-led {
   width: var(--mg-sp-3);

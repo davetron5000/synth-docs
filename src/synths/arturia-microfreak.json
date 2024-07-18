@@ -1,0 +1,69 @@
+{
+  "synth": {
+    "name": "Arturia Microfreak",
+    "firmware": "5.0.0.2084",
+    "manualLink": "https://www.arturia.com/products/hardware-synths/microfreak/resources",
+    "features": {
+      "Selecting Samples": {
+        "steps": [
+          "Use the <synth-knob>Type</synth-knob> knob to select “Sample”, “Scan Grains”, “Cloud Grains”, or “Hit Grains”",
+          "Hold down <synth-button>Shift</synth-button>, then rotate <synth-knob>Type</synth-knob> to bring up the sample menu",
+          "Rotate <synth-knob>Type</synth-knob> to select the sample",
+          "Hold down <synth-button>Shift</synth-button>, then rotate <synth-knob>Type</synth-knob> to exit this mode"
+        ]
+      },
+      "Cycling Envelope WTF": {
+        "steps": [
+          {
+            "step": "The <synth-button>Mode</synth-button> controls what the Cycling Envelope does:",
+            "details": [
+              [ "Value", "Behavior" ],
+              [ "Env", "Acts as a single envelope" ],
+              [ "Run", "Acts as a free-running LFO" ],
+              [ "Loop", "Acts as an LFO that is triggered and restarted by Gate/Key events" ]
+            ]
+          },
+          "Hold <synth-button>Shift</synth-button> and turn <synth-knob>Rise</synth-knob> to adjust the shape of attack",
+          "Hold <synth-button>Shift</synth-button> and turn <synth-knob>Fall</synth-knob> to adjust the shape of decay"
+        ]
+      },
+      "Modulating Modulation": {
+        "steps": [
+          "Hold down one of the <synth-button>Assign</synth-button> buttons",
+          "Turn the <synth-knob>Matrix</synth-knob> to select the modulation point to modulation",
+          "Release the <synth-button>Assign</synth-button> button"
+        ]
+      },
+      "Modulating Unison": {
+        "steps": [
+          "Hold down one of the <synth-button>Assign</synth-button> buttons",
+          "Press the <synth-button>Paraphonic</synth-button> button"
+        ]
+      },
+      "Unison": {
+        "steps": [
+          "Hold down <synth-button>Shift</synth-button> and hold down <synth-button>Paraphonic</synth-button>",
+          "Release <synth-button>Shift</synth-button>",
+          "Rotate <synth-knob>Preset</synth-knob> to adjust unison detune",
+          "Pressing <synth-button>Paraphonic</synth-button> will disable unison"
+        ],
+        "notes": "Make sure your preset is saved before doing this, just in case you mess it up"
+      }
+    },
+    "notes": [
+      "Sequencer is omitted since I don't use it"
+    ],
+    "midi": {
+      "programChange": true,
+      "cc": {
+        "Filter Cutoff": "23",
+        "Filter Resonance": "83",
+        "Oscillator Type": "9",
+        "Oscillator Wave": "10",
+        "Oscillator Timbre": "12",
+        "Oscillator Shape": "13",
+        "Spice": "2"
+      }
+    }
+  }
+}
