@@ -1,6 +1,8 @@
 {
   "synth": {
-    "name": "Arturia Microfreak",
+    "brand": "Arturia",
+    "name": "Microfreak",
+    "icon": "synth-small",
     "firmware": "5.0.0.2084",
     "manualLink": "https://www.arturia.com/products/hardware-synths/microfreak/resources",
     "features": {

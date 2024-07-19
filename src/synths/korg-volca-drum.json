@@ -1,6 +1,8 @@
 {
   "synth": {
-    "name": "Korg Volca Drum",
+    "brand": "Korg",
+    "name": "Volca Drum",
+    "icon": "synth-volcanic2",
     "firmware": "1.14",
     "manualLink": "https://www.korg.com/us/support/download/product/0/809/",
     "features": {

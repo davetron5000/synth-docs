@@ -1,6 +1,8 @@
 {
   "synth": {
-    "name": "Korg Volca FM2",
+    "brand": "Korg",
+    "name": "Volca FM2",
+    "icon": "synth-volcanic",
     "firmware": "1.12",
     "manualLink": "https://www.korg.com/us/support/download/product/0/892/",
     "features": {

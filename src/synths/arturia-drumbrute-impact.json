@@ -1,6 +1,8 @@
 {
   "synth": {
-    "name": "Arturia Drumbrute Impact",
+    "brand": "Arturia",
+    "name": "Drumbrute Impact",
+    "icon": "drum-machine-dr",
     "firmware": "1.2.1.0",
     "manualLink": "https://www.arturia.com/drumbrute/resources",
     "features": {

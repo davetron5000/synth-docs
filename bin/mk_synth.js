@@ -5,6 +5,7 @@ import { parseArgs } from 'node:util'
 import process from 'node:process'
 import fs from 'node:fs'
 import path from 'node:path'
+import child_process from 'node:child_process'
 
 class CLIError extends Error {
 }
@@ -28,6 +29,9 @@ const run = (args) => {
         type: "string",
       },
       indexTemplate: {
+        type: "string",
+      },
+      iconsDir: {
         type: "string",
       },
       verbose: {
@@ -54,12 +58,13 @@ const run = (args) => {
     console.log("  --outputDirInRoot DIR     -  path, relative to outputRoot, where the synth HTML should be written")
     console.log("  --template FILENAME       -  path to the EJS template for a synth")
     console.log("  --indexTemplate FILENAME  -  path to the EJS template for /index.html")
+    console.log("  --iconsDir DIR            -  path to where the icons are")
     console.log("  --root PATH               -  relative path of the root of the project when served, to locate CSS and JS")
     return
   }
   let cliError = false
 
-  const requiredOptions = [ "input", "outputRoot", "outputDirInRoot", "template", "indexTemplate" ]
+  const requiredOptions = [ "input", "outputRoot", "outputDirInRoot", "template", "indexTemplate", "iconsDir" ]
   requiredOptions.forEach( (requiredOption) => {
     if (!values[requiredOption]) {
       cliError = true
@@ -105,7 +110,11 @@ class Synth {
       }
     })
     this.name = metadata.synth.name
+    this.brand = metadata.synth.brand
+
+    this.fullName = `${this.brand} ${this.name}`
   }
+
 }
 
 class InputFile {
@@ -134,22 +143,39 @@ class InputFile {
 }
 
 class OutputFile {
-  constructor({outputRoot, outputDirInRoot, synth, rootUrl, template}) {
+  constructor({outputRoot, outputDirInRoot, synth, rootUrl, template, iconsDir}) {
 
     const synthHtmlFileName = `${synth.fileName}.html`
+    const synthIconName     = `${synth.fileName}-icon.png`
+    const synthManifestName = `${synth.fileName}-manifest.json`
 
-    this.fileName        = path.join(outputRoot,outputDirInRoot,synthHtmlFileName)
-    this.synth           = synth
-    this.rootUrl         = rootUrl
-    this.template        = template
-    this.relativePath    = `${outputDirInRoot}/${synthHtmlFileName}`
+    this.fileRelativePath         = path.join(outputDirInRoot,synthHtmlFileName)
+    this.fileName                 = path.join(outputRoot,this.fileRelativePath)
+    this.iconFileRelativePath     = path.join(outputDirInRoot,synthIconName)
+    this.iconFileName             = path.join(outputRoot,this.iconFileRelativePath)
+    this.synth                    = synth
+    this.rootUrl                  = rootUrl
+    this.template                 = template
+    this.relativePath             = `${outputDirInRoot}/${synthHtmlFileName}`
+    this.iconsDir                 = iconsDir
+    this.manifestFileRelativePath = path.join(outputDirInRoot,synthManifestName)
+    this.manifestFilename         = path.join(outputRoot,this.manifestFileRelativePath)
   }
 
 
   write() {
+
+    this.#writeHTML()
+    this.#writeManifest()
+  }
+  toString() { return this.fileName }
+
+
+  #writeHTML() {
+
     ejs.renderFile(
       this.template,
-      { root_url: this.rootUrl, synth: this.synth.metadata.synth },
+      { root_url: this.rootUrl, synth: this.synth.metadata.synth, iconPath: this.iconFileRelativePath, manifestPath: this.manifestFileRelativePath },
       {},
       (err, str) => {
         if (err) {
@@ -159,7 +185,22 @@ class OutputFile {
       }
     )
   }
-  toString() { return this.fileName }
+
+  #writeManifest() {
+    const manifest = {
+      display: "standalone",
+      name: this.synth.name,
+      start_url: `/${this.fileRelativePath}`,
+      icons: [
+        {
+          "src": `/${this.iconFileRelativePath}`,
+          "sizes": "816x816",
+          "type": "image/png",
+        }
+      ]
+    }
+    fs.writeFileSync(this.manifestFilename,JSON.stringify(manifest))
+  }
 }
 
 try {
@@ -190,9 +231,10 @@ try {
       synth: synth,
       rootUrl: options.root,
       template: options.template,
+      iconsDir: options.iconsDir,
     })
   }).sort( (a,b) => {
-    return a.synth.name.localeCompare(b.synth.name)
+    return a.synth.fullName.localeCompare(b.synth.fullName)
   })
 
   outputFiles.forEach( (outputFile) => {

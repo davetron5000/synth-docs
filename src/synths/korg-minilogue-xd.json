@@ -1,6 +1,8 @@
 {
   "synth": {
-    "name": "Korg Minilogue XD",
+    "brand": "Korg",
+    "name": "Minilogue XD",
+    "icon": "knobs-buttons",
     "firmware": "2.10",
     "manualLink": "https://www.korg.com/us/support/download/product/0/811/",
     "features": {

@@ -1,6 +1,8 @@
 {
   "synth": {
-    "name": "Arturia Keystep 37",
+    "brand": "Arturia",
+    "name": "Keystep 37",
+    "icon": "synth-controller",
     "firmware": "1.1.6.579",
     "manualLink": "https://www.arturia.com/products/hybrid-synths/keystep-37/resources",
     "features": {

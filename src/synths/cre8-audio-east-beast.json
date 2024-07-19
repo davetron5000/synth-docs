@@ -1,6 +1,8 @@
 {
   "synth": {
-    "name": "create8audio East Beast",
+    "brand": "Create8audio",
+    "name": "East Beast",
+    "icon": "knobs-buttons",
     "firmware": "1.5",
     "manualLink": "https://www.cre8audio.com/firmware-and-software",
     "features": {

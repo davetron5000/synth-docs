@@ -32,6 +32,7 @@ HTML_SRC_FILES=$(shell find $(HTML_SRC_DIR) -name '*.html' -not -path '*/templat
 
 SYNTH_TEMPLATE_FILE=$(HTML_TEMPLATES_SRC_DIR)/synth.html
 INDEX_TEMPLATE_FILE=$(HTML_TEMPLATES_SRC_DIR)/index.html
+ATTRIBUTION_TEMPLATE_FILE=$(HTML_TEMPLATES_SRC_DIR)/attribution.html
 
 CSS_SRC_DIR=$(SRC_DIR)/css
 CSS_SRC_FILE=$(CSS_SRC_DIR)/index.css
@@ -46,7 +47,7 @@ ICON_SRC_FILE=$(IMAGES_SRC_DIR)/icons/icon.png
 
 ASSETS_SRC_DIR=$(SRC_DIR)/assets
 ASSETS_SRC_FILES=$(shell find $(ASSETS_SRC_DIR) -name '*.*')
-MANIFEST_DEST=$(DEST_DIR)/manifest.webmanifest
+ICONS_DIR=$(ASSETS_SRC_DIR)/icons
 
 ## Destination Files
 
@@ -57,6 +58,7 @@ SYNTH_DEST_DIR=$(DEST_DIR)/synths
 SYNTH_DEST_FILES=${subst json,html, ${subst $(SYNTH_SRC_DIR),$(SYNTH_DEST_DIR),$(SYNTH_SRC_FILES)}}
 
 INDEX_DEST_FILE=$(DEST_DIR)/index.html
+ATTRIBUTION_DEST_FILE=$(DEST_DIR)/attribution.html
 
 IMAGES_DEST_DIR=$(DEST_DIR)/images
 ICONS_DEST_DIR=$(IMAGES_DEST_DIR)/icons
@@ -88,7 +90,10 @@ $(SYNTH_DEST_DIR):
 	@mkdir -p $(SYNTH_DEST_DIR)
 
 $(INDEX_DEST_FILE) $(SYNTH_DEST_FILES): $(INDEX_TEMPLATE_FILE) $(SYNTH_SRC_FILES) $(SYNTH_TEMPLATE_FILE)
-	@bin/mk_synth.js  --input $(SYNTH_SRC_DIR) --outputRoot $(DEST_DIR) --outputDirInRoot synths --template $(SYNTH_TEMPLATE_FILE) --indexTemplate $(INDEX_TEMPLATE_FILE) --root $(ROOT_URL)
+	@bin/mk_synth.js  --input $(SYNTH_SRC_DIR) --outputRoot $(DEST_DIR) --outputDirInRoot synths --template $(SYNTH_TEMPLATE_FILE) --indexTemplate $(INDEX_TEMPLATE_FILE) --root $(ROOT_URL) --iconsDir $(ASSETS_SRC_DIR)
+
+$(ATTRIBUTION_DEST_FILE): $(ATTRIBUTION_TEMPLATE_FILE) $(ASSETS_SRC_FILES)
+	bin/mk_attribution.js  --template $(ATTRIBUTION_TEMPLATE_FILE) --output $(DEST_DIR) --iconsDir $(ASSETS_SRC_DIR)
 
 $(IMAGES_DEST_DIR):
 	@mkdir -p $(IMAGES_DEST_DIR)
@@ -114,21 +119,12 @@ $(ICON_512): $(ICON_SRC_FILE)
 $(ASSETS_DEST_DIR)/%: $(ASSETS_SRC_DIR)/%
 	cp $< $@
 
-$(MANIFEST_DEST): $(ICON_512) $(ICON_192)
-	@echo "{" > $(MANIFEST_DEST)
-	@echo "  \"icons\": [" >> $(MANIFEST_DEST)
-	@echo "    { \"src\": \"/images/icons/icon-192.png\", \"type\": \"image/png\", \"sizes\": \"192x192\" }," >> $(MANIFEST_DEST)
-	@echo "    { \"src\": \"/images/icons/icon-512.png\", \"type\": \"image/png\", \"sizes\": \"512x512\" }" >> $(MANIFEST_DEST)
-	@echo "  ]" >> $(MANIFEST_DEST)
-	@echo "}" >> $(MANIFEST_DEST)
-
 clean:
 	@rm -rf $(DEST_DIR)
 
 debug:
-	@echo $(SYNTH_SRC_DIR)
-	@echo $(SYNTH_SRC_FILES)
-	@echo $(SYNTH_DEST_FILES)
+	@echo $(ATTRIBUTION_TEMPLATE_FILE)
+	@echo $(ATTRIBUTION_DEST_FILE)
 
-default: $(CSS_DEST_FILE) $(JS_DEST_FILE) $(HTML_DEST_FILES) $(ICONS_DEST_DIR) $(IMAGES_DEST_DIR) $(IMAGES_DEST_FILES) $(ASSETS_DEST_DIR) $(ASSETS_DEST_FILES) $(FAVICON_ICO) $(MANIFEST_DEST) $(ICON_180) $(SYNTH_DEST_DIR) $(SYNTH_DEST_FILES) $(INDEX_DEST_FILE)
+default: $(CSS_DEST_FILE) $(JS_DEST_FILE) $(HTML_DEST_FILES) $(ICONS_DEST_DIR) $(IMAGES_DEST_DIR) $(IMAGES_DEST_FILES) $(ASSETS_DEST_DIR) $(ASSETS_DEST_FILES) $(FAVICON_ICO) $(ICON_180) $(SYNTH_DEST_DIR) $(SYNTH_DEST_FILES) $(INDEX_DEST_FILE) $(ATTRIBUTION_DEST_FILE)
 	@echo Done with $(ENV)

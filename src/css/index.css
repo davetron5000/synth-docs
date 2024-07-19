@@ -35,12 +35,12 @@ synth-button[narrow] {
 }
 
 details.feature-doc:nth-child(even) {
-  background-color: var(--mg-purple-darker);
-  color: var(--mg-purple-lighter)
+  background-color: var(--mg-purple-300);
+  color: var(--mg-purple-700)
 }
 details.feature-doc:nth-child(odd) {
-  background-color: var(--mg-purple-darkest);
-  color: var(--mg-purple-lighter)
+  background-color: var(--mg-purple-100);
+  color: var(--mg-purple-700)
 }
 
 synth-knob {
@@ -72,14 +72,14 @@ synth-switch {
 synth-led {
   width: var(--mg-sp-3);
   height: var(--mg-sp-3);
-  border: solid thin var(--mg-yellow-lighter);
+  border: solid thin var(--mg-yellow-700);
   border-radius: 100%;
-  background-color: var(--mg-yellow-darkest);
+  background-color: var(--mg-yellow-100);
   display: inline-block;
   margin-left: var(--mg-sp-1);
   margin-right: var(--mg-sp-1);
 }
 
 synth-led[lit] {
-  background-color: var(--mg-yellow-lighter);
+  background-color: var(--mg-yellow-700);
 }

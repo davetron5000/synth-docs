@@ -1,8 +1,7 @@
 {
-  "name": "tleilax",
+  "name": "synth-docs",
   "version": "1.0.0",
-  "description": "Template for basic static site",
-  "main": "index.js",
+  "description": "Quick Reference for Synts",
   "author": "David Bryant Copeland",
   "license": "SEE LICENSE IN LICENSE.txt",
   "private": true,
@@ -12,6 +11,6 @@
     "ejs": "^3.1.9",
     "esbuild": "^0.19.5",
     "http-server": "^14.1.1",
-    "melange-css": "^1.0.0-beta6"
+    "melange-css": "^1.0.0-RC4"
   }
 }
