@@ -20,17 +20,32 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
   </head>
   <body class="ff-sans">
-    <header class="purple-700 pv-2 bg-purple-400">
-      <h1 class="ph-2 f-3 ma-0 lh-title"><a href="//synth-docs" class="purple-700"><span role="img" aria-description="back arrow">&larr;</span> menudiving.wtf</a></h1>
+    <header class="purple-700 pv-2 bg-purple-400 flex items-center justify-between gap-2">
+      <synth-pwa-detection class="pl-2">
+        <h1 data-if-not-pwa class="f-3 ma-0 lh-title"><a href="/synth-docs" class="purple-700"><span role="img" aria-description="back arrow">&larr;</span> menudiving.wtf</a></h1>
+        <button data-if-pwa class="dn ba br-3 bc-purple-600 bg-purple-800 shadow-1 purple-500">Refresh Content</button>
+      </synth-pwa-detection>
+      <time class="pr-2 purple-600" datetime="2024-07-19T22:30:16.935Z">Published Fri Jul 19 2024</time>
     </header>
     <main>
-      <section class="purple-300 bg-purple-700 ph-2 pb-2 pt-3">
+      <section class="purple-300 bg-purple-700 ph-2 pb-2 pt-3 w-100 w-50-ns mh-auto">
         <h3 class="ma-0 f-3 ttu tracked">
           Korg
         </h3>
         <h2 class="ma-0 f-5 lh-title">
             Volca Drum
         </h2>
+        <synth-homescreen-notification>
+          <aside class="ba bc-orange-400 bg-orange-900 br-3 pa-3 mt-3 mb-2 orange-300 f-3 flex items-end justify-between">
+            <div class="flex items-center justify-start gap-2">
+              <span role="img" aria-description="light bulb">💡</span>
+              <p class="p pa-0 ma-0">
+                Add this page to your phone's homescreen for better access.  <a class="orange-300" href="/synth-docs/how-to-use.html">Learn how</a>
+              </p>
+            </div>
+            <button class="db ba pointer bc-orange-300 br-2 bg-orange-300 orange-700 f-1 shadow-1">Dismiss</button>
+          </aside>
+        </synth-homescreen-notification>
         <div class="flex items-center justify-between gap-3">
         
         <p class="p f-2 purple-300">
@@ -636,8 +651,15 @@
       </section>
     </main>
     <footer class="bg-black-ish white-ish pv-4">
-      <p class="p mh-auto tc">Everything here is Copyright &copy; 2024 by David Bryant Copeland, Released under the <a class="purple-600" href="https://firstdonoharm.dev/version/2/1/license/">Hippocratic License, v2.1</a>.
-        <p class="p mh-auto tc">All of the code and content was created <a class="green-700" href="https://declare-ai.org/1.0.0/none.html">without any assistance from a generative AI</a>.
-    </footer>
+  <section class="w-90 w-50-ns mh-auto">
+    <p class="p mh-auto tc">
+      Content here is Copyright &copy; 2024 by David Bryant Copeland, All Rights Reserved. Icons are all licensed via the <a class="purple-700" href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> license.  Attribution for icons can be found <a class="purple-700" href="/attribution.html">on the Attributions page</a>.
+    </p>
+    <p class="p mh-auto tc">
+      Content was created <a class="green-700" href="https://declare-ai.org/1.0.0/none.html">without any assistance from a generative AI</a>.
+    </p>
+  </section>
+</footer>
+
   </body>
 </html>

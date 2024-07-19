@@ -182,7 +182,12 @@ class OutputFile {
 
     ejs.renderFile(
       this.template,
-      { root_url: this.rootUrl, synth: this.synth.metadata.synth, iconPath: this.iconFileRelativePath, manifestPath: this.manifestFileRelativePath },
+      { root_url: this.rootUrl,
+        synth: this.synth.metadata.synth,
+        iconPath: this.iconFileRelativePath,
+        manifestPath: this.manifestFileRelativePath,
+        date: new Date(),
+      },
       {},
       (err, str) => {
         if (err) {

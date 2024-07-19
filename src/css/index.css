@@ -83,3 +83,8 @@ synth-led {
 synth-led[lit] {
   background-color: var(--mg-yellow-700);
 }
+
+button.shadow-1:active {
+  box-shadow: none;
+  transform: translate(1px,1px);
+}
