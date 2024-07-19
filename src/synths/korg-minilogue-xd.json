@@ -1,0 +1,109 @@
+{
+  "synth": {
+    "name": "Korg Minilogue XD",
+    "firmware": "2.10",
+    "manualLink": "https://www.korg.com/us/support/download/product/0/811/",
+    "features": {
+      "Oscillator Sync": {
+        "steps": [
+          "Set <synth-switch>Sync</synth-switch> to on",
+          "Make sure VCO 2 is set to a higher pitch/octave than VCO 1"
+        ]
+      },
+      "Invert LFO Waveform": {
+        "steps": [
+          "Hold down <synth-button>Shift</synth-button>, turn <synth-knob>Int</synth-knob>."
+        ]
+      },
+      "Sub-types for Modulation Effects": {
+        "steps": [
+          "Select a modulation effect with the <synth-switch>Select</synth-switch> switch",
+          "Hold down <synth-button>Shift</synth-button>, use <synth-switch>Select</synth-switch> to rotate sub-types."
+        ]
+      },
+      "Wet/Dry Balance for Effects": {
+        "steps": [
+          "Select the effect with the <synth-switch>Mod/Rev/Del</synth-switch> switch",
+          "Hold down <synth-button>Shift</synth-button>, and turn <synth-knob>Depth</synth-knob> to adjust wet/dry."
+        ]
+      },
+      "LFO Target": {
+        "steps": [
+          "Enter Program Edit Mode, then tap <synth-button narrow>7</synth-button>",
+          {
+            "step": "Choose the target of the LFO's modulation",
+            "details": [
+              [ "Value", "Target" ],
+              [ "All", "All three oscillators" ],
+              [ "VCO1+2", "The two analog oscillators" ],
+              [ "VCO2", "Only VCO 2" ],
+              [ "Multi", "Only the multi-engine" ]
+            ]
+          }
+        ]
+      },
+      "Motion Sequencing - Real Time": {
+        "steps": [
+          "Press <synth-button>Play</synth-button>",
+          "Press <synth-button>Motion Mode</synth-button>",
+          "Press <synth-button>Rec</synth-button>",
+          "Move knobs or switches. Up to four different things can be recorded",
+          "Smoothing can be configured in Sequence Edit Mode, button <synth-button narrow>12</synth-button>"
+        ]
+      },
+      "Motion Sequencing - Param Lock": {
+        "steps": [
+          "Hold down one or more of the 1–16 buttons",
+          "Move a knobs or manipulate a switches. This will set the value for the steps you held down",
+          "Smoothing can be configured in Sequence Edit Mode, button <synth-button narrow>12</synth-button>"
+        ]
+      },
+      "Time Division": {
+        "steps": [
+          "Enter Sequence Edit Mode, then tap <synth-button narrow>7</synth-button>",
+          "Step Resolution can be used to adjust how long each step is"
+        ]
+      },
+      "LFO Syncing": {
+        "steps": [
+          "Enter Program Edit Mode, then tap <synth-button narrow>7</synth-button>",
+          "Key sync resets the LFO on each note",
+          "Voice sync keeps all four voices of polyphony on the same cycle"
+        ]
+      },
+      "Noise Engine": {
+        "steps": [
+          "Set the multi-engine switch to the bottom setting",
+          {
+            "step": "Adjust the <synth-knob>Type</synth-knob> knob to choose the type of noise:",
+            "details": [
+              [ "Type", "Behavior" ],
+              [ "High",  "Noise with a high-pass filter via <synth-knob>Shape</synth-knob>" ],
+              [ "Low",   "Noise with a low-pass filter via <synth-knob>Shape</synth-knob>" ],
+              [ "Peak",  "Noise with a bandpass filter via <synth-knob>Shape</synth-knob>" ],
+              [ "Decim", "Sample-rate reduced noise with <synth-knob>Shape</synth-knob> adjusting rate and <synth-button>Shift</synth-button> <synth-knob>Shape</synth-knob> adjusting keyboard tracking" ]
+            ]
+          }
+        ]
+      }
+    },
+    "midi": {
+      "programChange": true,
+      "cc": {
+        "Filter Cutoff": "43",
+        "Filter Resonance": "44",
+        "Mod Time": "28",
+        "Mod Depth": "29",
+        "Reverb Time": "108",
+        "Reverb Depth": "109",
+        "Delay Time": "105",
+        "Delay Depth": "106",
+        "LFO Intesity": "26",
+        "LFO Rate": "24",
+        "VCO1 Shape": "36",
+        "VCO2 Shape": "37",
+        "Multi-Engine Shape": "54"
+      }
+    }
+  }
+}
