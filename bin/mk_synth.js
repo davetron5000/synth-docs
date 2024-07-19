@@ -157,9 +157,9 @@ class OutputFile {
     this.rootUrl                  = rootUrl
     this.template                 = template
     this.relativePath             = `${outputDirInRoot}/${synthHtmlFileName}`
-    this.iconsDir                 = iconsDir
     this.manifestFileRelativePath = path.join(outputDirInRoot,synthManifestName)
     this.manifestFilename         = path.join(outputRoot,this.manifestFileRelativePath)
+    this.iconSource               = path.join(iconsDir,`icon_${synth.metadata.synth.icon}.png`)
   }
 
 
@@ -167,8 +167,15 @@ class OutputFile {
 
     this.#writeHTML()
     this.#writeManifest()
+    this.#copyIcon()
   }
+
   toString() { return this.fileName }
+
+  #copyIcon() {
+    log(`Copying icon '${this.iconSource}' to '${this.iconFileName}'`)
+    fs.copyFileSync(this.iconSource,this.iconFileName)
+  }
 
 
   #writeHTML() {
