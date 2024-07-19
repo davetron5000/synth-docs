@@ -190,10 +190,10 @@ class OutputFile {
     const manifest = {
       display: "standalone",
       name: this.synth.name,
-      start_url: `/${this.fileRelativePath}`,
+      start_url: `${this.rootUrl}/${this.fileRelativePath}`,
       icons: [
         {
-          "src": `/${this.iconFileRelativePath}`,
+          "src": `${this.rootUrl}/${this.iconFileRelativePath}`,
           "sizes": "816x816",
           "type": "image/png",
         }
