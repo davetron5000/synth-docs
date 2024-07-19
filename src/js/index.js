@@ -60,11 +60,26 @@ class PWADetection extends HTMLElement {
     })
 
   }
-
 }
 
+class ReloadPage extends HTMLElement {
+
+  #reloadPage
+
+  constructor() {
+    super()
+    this.#reloadPage = (event) => {
+      event.preventDefault()
+      window.location.reload()
+    }
+  }
+  connectedCallback() {
+    this.querySelector("button").addEventListener("click", this.#reloadPage)
+  }
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   customElements.define("synth-homescreen-notification",HomescreenNotification)
   customElements.define("synth-pwa-detection",PWADetection)
+  customElements.define("synth-reload",ReloadPage)
 })
