@@ -93,7 +93,7 @@ $(INDEX_DEST_FILE) $(SYNTH_DEST_FILES): $(INDEX_TEMPLATE_FILE) $(SYNTH_SRC_FILES
 	@bin/mk_synth.js  --input $(SYNTH_SRC_DIR) --outputRoot $(DEST_DIR) --outputDirInRoot synths --template $(SYNTH_TEMPLATE_FILE) --indexTemplate $(INDEX_TEMPLATE_FILE) --root $(ROOT_URL) --iconsDir $(ASSETS_SRC_DIR)
 
 $(ATTRIBUTION_DEST_FILE): $(ATTRIBUTION_TEMPLATE_FILE) $(ASSETS_SRC_FILES)
-	bin/mk_attribution.js  --template $(ATTRIBUTION_TEMPLATE_FILE) --output $(DEST_DIR) --iconsDir $(ASSETS_SRC_DIR)
+	bin/mk_attribution.js  --template $(ATTRIBUTION_TEMPLATE_FILE) --output $(DEST_DIR) --iconsDir $(ASSETS_SRC_DIR) --root $(ROOT_URL)
 
 $(IMAGES_DEST_DIR):
 	@mkdir -p $(IMAGES_DEST_DIR)
