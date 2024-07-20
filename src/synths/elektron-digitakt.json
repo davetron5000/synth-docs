@@ -1,0 +1,126 @@
+{
+  "synth": {
+    "brand": "Elektron",
+    "name": "Digitakt",
+    "icon": "drum-machine-dr",
+    "firmware": "1.51A",
+    "manualLink": "https://www.elektron.se/en/download-support-digitakt",
+    "tbd": {
+      "Copy Track Triggers": {
+      },
+      "Copy Track Triggers Page": {
+      },
+      "Copy Trig": {
+      },
+      "Copy Track Settings": {
+      },
+      "Roll Instrument (Roller)": {
+      },
+      "Step Repeat (Looper)": {
+      },
+      "Save and Restore a Pattern Quickly": {
+      },
+      "Compressor WTF": {
+      },
+      "LFO Page WTF": {
+      },
+      "Randomize Sample Slices": {
+      },
+      "Ordered Sample Slices": {
+      }
+    },
+    "features": {
+      "Copy Pattern": {
+        "steps": [
+          "Exit Grid Recording mode",
+          "Select the pattern to copy from",
+          "Press <synth-button>FUNC</synth-button> and <synth-button narrow>⏺</synth-button> to copy the pattern",
+          "Selec the pattern to copy to",
+          "Press <synth-button>FUNC</synth-button> and <synth-button narrow>⏹️</synth-button> to paste the pattern"
+        ]
+      },
+      "Clear all Trigs in Pattern": {
+        "steps": [
+          "Exit Grid Recording mode",
+          "Select the pattern to clear",
+          "Press <synth-button>FUNC</synth-button> and <synth-button narrow>▶️</synth-button> to clear the pattern's trigs"
+        ]
+      },
+      "Fill Mode WTF": {
+        "steps": [
+          "Press <synth-button>YES</synth-button> and <synth-button>PAGE</synth-button> to activate fills for the next repetition of the pattern",
+          "Hold <synth-button>PAGE</synth-button> to activate fills immediately while held down",
+          "Press <synth-button>YES</synth-button> and <synth-button>PAGE</synth-button>, release <synth-button>YES</synth-button>, then release <synth-button>PAGE</synth-button> to latch Fill Mode",
+          "Press <synth-button>PAGE</synth-button> to unlatch Fill Mode"
+        ]
+      },
+      "Trig Conditions WTF": {
+        "steps": [
+          "Hold down <synth-button>TRIG</synth-button> step(s) to lock trigs, or don't to affect track",
+          {
+            "step": "Choose the condition",
+            "details": [
+              [ "Condition", "Meaning" ],
+              [ "X%", "Play X% of the time" ],
+              [ "FILL", "Played only when in fill mode" ],
+              [ "<span class='tdo'>FILL</span>", "Played when not in fill mode" ],
+              [ "A:B", "Trigger A times out of B repeats of the pattern"],
+              [ "PRE", "Play if most previous condition was true" ],
+              [ "<span class='tdo'>PRE</span>", "Played when most previous condition not true" ],
+              [ "1ST", "Play only the first time the pattern is looped" ],
+              [ "<span class='tdo'>1ST</span>", "Play always, exception the first time the pattern is looped"],
+              [ "NEI", "Play if most previous condition on track-1 was true" ],
+              [ "<span class='tdo'>NEI</span>", "Played when most previous condition on track-1 not true" ]
+            ]
+          }
+        ]
+      },
+      "Clear Step Param Lock": {
+        "steps": [
+          "Press <synth-button narrow>⏺</synth-button> to enter recording mode",
+          "Hold down <synth-button>TRIG</synth-button> for the step(s) to remove",
+          "Press the <synth-knob>DATA ENTRY</synth-knob> knob for the parameter to remove"
+        ]
+      },
+      "Control ALL": {
+        "steps": [
+          "Press and hold <synth-button>TRK</synth-button>",
+          "Adjust any parameter and it adjusts for all audio tracks",
+          "Press <synth-button>NO</synth-button> to revert changes",
+          "Release <synth-button>TRK</synth-button>"
+        ]
+      },
+      "Step Recording": {
+        "steps": [
+          "Press <synth-button narrow>⏺</synth-button> and <synth-button narrow>⏹️</synth-button> to enter step recording mode",
+          "Press a <synth-button>TRIG</synth-button> key to indicate where to start recording",
+          "Research more because this is a nightmare"
+        ]
+      },
+      "Ratchet or Flam Steps (Retrig)": {
+        "steps": [
+          "Press and hold any <synth-button>TRIG</synth-button> keys",
+          "Press <synth-button>&uarr;</synth-button> or <synth-button>&darr;</synth-button> to open menu",
+          "“Retrig” must be on",
+          "Press <synth-button>&uarr;</synth-button> or <synth-button>&darr;</synth-button> to change the rate, with <sup>1</sup>&frasl;<sub>16</sub> being no retriggering",
+          "research more -- this is complicated"
+        ]
+      },
+      "Time Division": {
+        "steps": [
+          "Press <synth-button>FUNC</synth-button> and <synth-button>PAGE</synth-button> to enter the scale menu",
+          "Change scale as needed. 1x are <sup>1</sup>&frasl;<sub>16</sub> notes, 2x are <sup>1</sup>&frasl;<sub>32</sub> notes, <sup>1</sup>&frasl;<sub>2</sub>x are <sup>1</sup>&frasl;<sub>8</sub> notes, etc."
+        ]
+      }
+    },
+    "notes": [
+      "Almost everything (including tempo and audio routing) is <em>per pattern</em>, so add patterns by copying one with the settings you want",
+      "MIDI Outputs for the audio channels send CC only, not notes"
+    ],
+    "midi": {
+      "programChange": true,
+      "cc": {},
+      "notes": "MIDI Channel must be changed in MIDI Control Center"
+    }
+  }
+}
