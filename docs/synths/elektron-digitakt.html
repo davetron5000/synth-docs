@@ -1,0 +1,1485 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<link href="Copyright (c) 2019–2023 David Bryant Copeland, All Rights Reserved" rel="copyright">
+<title>Menu Diving | Elektron Digitakt</title>
+<meta content="Menu Diving Support for Elektron Digitakt" name="description">
+<meta content="David Bryant Copeland" name="author">
+<meta content="Menu Diving | Elektron Digitakt" name="og:title">
+<meta content="website" property="og:type">
+<meta itemprop="ai-content-declaration:version" content="1.0.0">
+<meta itemprop="ai-content-declaration:level" content="none">
+<link href="/synth-docs/css/styles.css" rel="stylesheet">
+<script src="/synth-docs/js/main.js"></script>
+
+    <link rel="icon" href="/synth-docs/synths/elektron-digitakt-icon.png" type="image/png">
+    <link rel="manifest" href="/synth-docs/synths/elektron-digitakt-manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  </head>
+  <body class="ff-sans">
+    <header class="purple-700 pv-2 bg-purple-400 flex items-center justify-between gap-2">
+      <synth-pwa-detection class="pl-2">
+        <h1 data-if-not-pwa class="f-3 ma-0 lh-title"><a href="/synth-docs/" class="purple-700"><span role="img" aria-description="back arrow">&larr;</span> menudiving.wtf</a></h1>
+        <synth-reload>
+          <button data-if-pwa class="dn ba br-3 bc-purple-600 bg-purple-800 shadow-1 purple-500">Refresh Content</button>
+        </synth-reload>
+      </synth-pwa-detection>
+      <time class="pr-2 purple-600" datetime="2024-07-21T20:02:35.481Z">Published Sun Jul 21 2024</time>
+    </header>
+    <main>
+      <section class="purple-300 bg-purple-700 ph-2 pb-2 pt-3 w-100 w-50-ns mh-auto">
+        <h3 class="ma-0 f-3 ttu tracked">
+          Elektron
+        </h3>
+        <h2 class="ma-0 f-5 lh-title">
+            Digitakt
+        </h2>
+        <synth-homescreen-notification>
+          <aside class="ba bc-orange-400 bg-orange-900 br-3 pa-3 mt-3 mb-2 orange-300 f-3 flex items-end justify-between">
+            <div class="flex items-center justify-start gap-2">
+              <span role="img" aria-description="light bulb">💡</span>
+              <p class="p pa-0 ma-0">
+                Add this page to your phone's homescreen for better access.  <a class="orange-300" href="/synth-docs/how-to-use.html">Learn how</a>
+              </p>
+            </div>
+            <button class="db ba pointer bc-orange-300 br-2 bg-orange-300 orange-700 f-1 shadow-1">Dismiss</button>
+          </aside>
+        </synth-homescreen-notification>
+        <div class="flex items-center justify-between gap-3">
+        
+        <p class="p f-2 purple-300">
+          <span role="image" aria-description="floppy disk">💾</span>
+          Firmware 1.51A
+        </p>
+        
+        
+        <p class="p f-2">
+          <a class="purple-200 mt-3 tdn" href="https://www.elektron.se/en/download-support-digitakt">
+            <span role="img" aria-description="open book">📖</span>
+            <span class="tdu">Official Manual</span>
+          </a>
+        </p>
+        
+        </div>
+      </section>
+      <section class="mh-auto w-100 w-50-ns ff-sans mh-2">
+        <h3 class="sr-only">Features</h3>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Clear all Trigs in Pattern</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      Exit Grid Recording mode
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Select the pattern to clear
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press <synth-button>FUNC</synth-button> and <synth-button narrow>▶️</synth-button> to clear the pattern's trigs
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Clear Step Param Lock</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press <synth-button narrow>⏺</synth-button> to enter recording mode
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Hold down <synth-button>TRIG</synth-button> for the step(s) to remove
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press the <synth-knob>DATA ENTRY</synth-knob> knob for the parameter to remove
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Compressor WTF</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press <synth-button>FUNC</synth-button> and <synth-button>LFO</synth-button> to access the Compressor
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      “THR” is the threshold: lowever values mean more compression
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      “RAT” is the ratio: higher values mean more compression
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+            <p class="f-1 i measure-wide ph-3">FIGURE OUT IF MUTING TRACK OF SIDECHAIN MUTES COMP</p>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Control ALL</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press and hold <synth-button>TRK</synth-button>
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Adjust any parameter and it adjusts for all audio tracks
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press <synth-button>NO</synth-button> to revert changes
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Release <synth-button>TRK</synth-button>
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Copy Pattern</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      Exit Grid Recording mode
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Select the pattern to copy from
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press <synth-button>FUNC</synth-button> and <synth-button narrow>⏺</synth-button> to copy the pattern
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Selec the pattern to copy to
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press <synth-button>FUNC</synth-button> and <synth-button narrow>⏹️</synth-button> to paste the pattern
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Copy Track Sound</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      Select the track to copy from
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Tab <synth-button>⏺</synth-button>
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Hold down <synth-button>TRK</synth-button> and tap <synth-button>⏺</synth-button>
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Hold down <synth-button>TRK</synth-button> and tap the track to copy to
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Hold down <synth-button>TRK</synth-button> and tap <synth-button>⏹️</synth-button>
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+            <p class="f-1 i measure-wide ph-3">This copies the sound, which is the sample + params</p>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Copy Track Triggers</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      Select the track to copy from
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Tab <synth-button>⏺</synth-button>
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Hold down <synth-button>FUNC</synth-button> and tap <synth-button>⏺</synth-button>
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Hold down <synth-button>TRK</synth-button> and tap the track to copy to
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Hold down <synth-button>FUNC</synth-button> and tap <synth-button>⏹️</synth-button>
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+            <p class="f-1 i measure-wide ph-3">This copies trigs, but not parameters/sound</p>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Copy Track Triggers Page</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      In recording mode, navigate to the page to copy
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Hold down <synth-button>PAGE</synth-button> and tap <synth-button>⏺</synth-button>
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Navigate to the page to paste to
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Hold down <synth-button>PAGE</synth-button> and tap <synth-button>⏹️</synth-button>
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Copy Trig</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      Hold down the trig to copy
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press <synth-button>⏺</synth-button> to copy it
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Release and hold down the trig to paste to
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press <synth-button>⏹️</synth-button> to paste
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+            <p class="f-1 i measure-wide ph-3">You can only paste to one trig at a time, but you can keep pasting as long as you don't copy something else</p>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Fill Mode WTF</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press <synth-button>YES</synth-button> and <synth-button>PAGE</synth-button> to activate fills for the <em>next</em> repetition of the pattern
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Hold <synth-button>PAGE</synth-button> to activate fills immediately while held down
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      To latch fill mode, you must be stopped!
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Then, press <synth-button>YES</synth-button> and <synth-button>PAGE</synth-button>, release <synth-button>PAGE</synth-button>, then release <synth-button>YES</synth-button>
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press <synth-button>PAGE</synth-button> to unlatch Fill Mode (you can do this while playing)
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">LFO Page WTF</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      Set the Speed to 8
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Set the MULT to 16
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      This will produce one cycle for each page, assuming the use of <sup>1</sup>&frasl;<sub>16</sub> notes per step
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">I find the relationship confusing</p>
+                    <table class="collapse w-100">
+                      <thead>
+                        <tr>
+                          
+                            <th class="tl pa-2 bb bw-1">SPD&frasl;MULT</th>
+                          
+                            <th class="tl pa-2 bb bw-1">2</th>
+                          
+                            <th class="tl pa-2 bb bw-1">8</th>
+                          
+                            <th class="tl pa-2 bb bw-1">32</th>
+                          
+                            <th class="tl pa-2 bb bw-1">128</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                8
+                              </td>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                128
+                              </td>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                32
+                              </td>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                8
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                2
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                32
+                              </td>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                32
+                              </td>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                8
+                              </td>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                2
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <sup>1</sup>&frasl;<sub>2</sub>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                64
+                              </td>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                16
+                              </td>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                4
+                              </td>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                1
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                <sup>1</sup>&frasl;<sub>4</sub>
+                              </td>
+                            
+                          </tr>
+                        
+                      </tbody>
+                    </table>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      For “FAD” a negative value is a fade-in
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">The “MODE” values are as follows:</p>
+                    <table class="collapse w-100">
+                      <thead>
+                        <tr>
+                          
+                            <th class="tl pa-2 bb bw-1">Value</th>
+                          
+                            <th class="tl pa-2 bb bw-1">Meaning</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                FRE
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Free-running, never restarting on triggers (though seems to restart on play)
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                TRG
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Restarts when a note is triggered
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                HLD
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Free-running, but a trigger latches to the current value until the next trig
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                ONE
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Runs once, like an envelope
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                HLF
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Runs for half the wave, then stops, like an envelope
+                              </td>
+                            
+                          </tr>
+                        
+                      </tbody>
+                    </table>
+                  
+                </li>
+              
+            </ol>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Ratchet or Flam Steps (Retrig)</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press and hold any <synth-button>TRIG</synth-button> keys
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press <synth-button>&uarr;</synth-button> or <synth-button>&darr;</synth-button> to open menu
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      “Retrig” must be on
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press <synth-button>&uarr;</synth-button> or <synth-button>&darr;</synth-button> to change the rate of retriggering
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Turn <synth-knob>D</synth-knob> to configure how long retriggering will happen
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Turn <synth-knob>H</synth-knob> to adjust the velocity curve. Negative values will fade out, positive fade up.
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+            <p class="f-1 i measure-wide ph-3">If a trig occurs before the rate + length would complete, the retriggering will be stopped by the trig</p>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Sample Slices - Ordered</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      Ensure the track is using the “Slice” machine
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Place trigs, e.g. every step or every other step
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press <synth-button>YES</synth-button>, then choose “Create Linear Locks”
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press <synth-button>YES</synth-button> to confirm
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Sample Slices - Random</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      Ensure the track is using the “Slice” machine
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Place trigs, e.g. every step or every other step
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press <synth-button>YES</synth-button>, then choose “Create Random Locks”
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press <synth-button>YES</synth-button> to confirm
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Save and Restore a Pattern Quickly</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      Hold <synth-button>FUNC</synth-button> and tap <synth-button>YES</synth-button>
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Adjust anything anywhere you want
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Hold <synth-button>FUNC</synth-button> and tap <synth-button>NO</synth-button>, and all changes are reverted to the save point
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Sounds - Adding to Project</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">Add a sound to the Pool, which allows sound locks</p>
+                    <table class="collapse w-100">
+                      <thead>
+                        <tr>
+                          
+                            <th class="tl pa-2 bb bw-1">Step</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb ">
+                                Press <synth-button>FUNC</synth-button> and <synth-button narrow>&ctdot;</synth-button>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb ">
+                                Select “Manage Sounds”
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb ">
+                                For each sound you want to add, press <synth-button>YES</synth-button> to select it
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb ">
+                                Tap <synth-button>FUNC</synth-button> and <synth-button>YES</synth-button> to audition it
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb ">
+                                Press <synth-button>&rarr;</synth-button> to open a menu
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb ">
+                                Select “Copy To…”, then “Pool”
+                              </td>
+                            
+                          </tr>
+                        
+                      </tbody>
+                    </table>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press <synth-button>FUNC</synth-button> and turn <synth-knob>Level/Data</synth-knob>
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press <synth-button>&larr;</synth-button> to reveal a menu
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Select “View Pool”,  “View +Drive”, or “Filter” as needed
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Tap <synth-button>FUNC</synth-button> and <synth-button>YES</synth-button> to audition sounds
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Select the sound
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      You can hold <synth-button>FUNC</synth-button> and tap a track to change which track you will load into
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Tap <synth-button>YES</synth-button> to change the sound of the track
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Sounds - Flip per Step</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      Hold down any of the trig buttons you want to flip
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Turn <synth-knob>Level/Data</synth-knob>
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Release the trigs when you've selected the sound
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press and hold the trigs again, and the name of the sound will show on the screen
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Sounds - Saving</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press <synth-button>FUNC</synth-button> and <synth-button narrow>&ctdot;</synth-button>
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Select “Export Sounds”
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Use <synth-knob>Level/Data</synth-knob> to choose an empty slot
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Name the sound
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Add tags by navigating and tapping <synth-button>Yes</synth-button> to toggle tags
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Navigate back to “Save”, then tap <synth-button>Yes</synth-button> to save
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Step Recording</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press <synth-button narrow>⏺</synth-button> and <synth-button narrow>⏹️</synth-button> to enter step recording mode
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press a <synth-button>TRIG</synth-button> key to indicate where to start recording
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Enter notes via MIDI keyboard, and each step will advance
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Tap <synth-button>NO</synth-button> to add a rest, or just tap the next trig where you want to enter a note
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+            <p class="f-1 i measure-wide ph-3">Ties and length changes don't seem possible</p>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Time Division</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      Press <synth-button>FUNC</synth-button> and <synth-button>PAGE</synth-button> to enter the scale menu
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      Change scale as needed. 1x are <sup>1</sup>&frasl;<sub>16</sub> notes, 2x are <sup>1</sup>&frasl;<sub>32</sub> notes, <sup>1</sup>&frasl;<sub>2</sub>x are <sup>1</sup>&frasl;<sub>8</sub> notes, etc.
+                    </p>
+                  
+                </li>
+              
+            </ol>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Trig Conditions WTF</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      Hold down <synth-button>TRIG</synth-button> step(s) to lock trigs, or don't to affect track
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">Choose the condition</p>
+                    <table class="collapse w-100">
+                      <thead>
+                        <tr>
+                          
+                            <th class="tl pa-2 bb bw-1">Condition</th>
+                          
+                            <th class="tl pa-2 bb bw-1">Meaning</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                X%
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Play X% of the time
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                FILL
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Played only when in fill mode
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                <span class='tdo'>FILL</span>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Played when not in fill mode
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                A:B
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Trigger A times out of B repeats of the pattern
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                PRE
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Play if most previous condition was true
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                <span class='tdo'>PRE</span>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Played when most previous condition not true
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                1ST
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Play only the first time the pattern is looped
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                <span class='tdo'>1ST</span>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Play always, exception the first time the pattern is looped
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                NEI
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Play if most previous condition on track-1 was true
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                <span class='tdo'>NEI</span>
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Played when most previous condition on track-1 not true
+                              </td>
+                            
+                          </tr>
+                        
+                      </tbody>
+                    </table>
+                  
+                </li>
+              
+            </ol>
+            
+          </details>
+        
+      </section>
+      <section class="mh-auto w-100 w-50-ns ff-sans mh-2">
+        
+          <details class="bg-yellow-300 yellow-900 pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h3 class="f-4 tdu">Notes and Non-Obvious Behaviors</h3>
+            </summary>
+            <ul>
+              
+                <li>
+                    <p class="p">
+                      A Sound is a sample + the configuration of Digitakt parameters, like a preset
+                    </p>
+                </li>
+              
+                <li>
+                    <p class="p">
+                      Almost everything (including tempo and audio routing) is <em>per pattern</em>, so add patterns by copying one with the settings you want
+                    </p>
+                </li>
+              
+                <li>
+                    <p class="p">
+                      MIDI Outputs for the audio channels send CC only, not notes
+                    </p>
+                </li>
+              
+            </ul>
+          </details>
+        
+        <details class="bg-yellow-lighest yellow-300 pa-2">
+          <summary class="ma-0 f-4 lh-title pv-2">
+            <h3 class="f-4 tdu">MIDI Info &amp; CCs</h3>
+          </summary>
+          
+            <p class="f-1 fw-4"><span role="img" aria-label="checkmark">✅</span> Responds to Program Change</p>
+          
+          
+            <table class="collapse w-100">
+              <thead>
+                <tr>
+                  <th class="tl fw-8 pa-2 bb w-1 ws-nowrap">Param</th>
+                  <th class="tl fw-8 pa-2 bb">CC #</th>
+                </tr>
+              </thead>
+              <tbody>
+              
+              <tr>
+                <td class="pa-2 bb w-1 ws-nowrap">
+                  Filter Cutoff
+                </td>
+                <td class="pa-2 bb fw-4 ff-mono">
+                  74
+                </td>
+              </tr>
+              
+              <tr>
+                <td class="pa-2 bb w-1 ws-nowrap">
+                  Filter Resonance
+                </td>
+                <td class="pa-2 bb fw-4 ff-mono">
+                  75
+                </td>
+              </tr>
+              
+              <tr>
+                <td class="pa-2 bb w-1 ws-nowrap">
+                  Reverb Send
+                </td>
+                <td class="pa-2 bb fw-4 ff-mono">
+                  83
+                </td>
+              </tr>
+              
+              <tr>
+                <td class="pa-2 bb w-1 ws-nowrap">
+                  Delay Send
+                </td>
+                <td class="pa-2 bb fw-4 ff-mono">
+                  82
+                </td>
+              </tr>
+              
+              <tr>
+                <td class="pa-2 bb w-1 ws-nowrap">
+                  Compressor Threshold
+                </td>
+                <td class="pa-2 bb fw-4 ff-mono">
+                  111
+                </td>
+              </tr>
+              
+              <tr>
+                <td class="pa-2 bb w-1 ws-nowrap">
+                  Compresser Dry/Wet
+                </td>
+                <td class="pa-2 bb fw-4 ff-mono">
+                  118
+                </td>
+              </tr>
+              
+              </tbody>
+            </table>
+          
+          
+        </details>
+      </section>
+    </main>
+    <footer class="bg-black-ish white-ish pv-4">
+  <section class="w-90 w-50-ns mh-auto">
+    <p class="p mh-auto tc">
+      Content here is Copyright &copy; 2024 by David Bryant Copeland, All Rights Reserved. Icons are all licensed via the <a class="purple-700" href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> license.  Attribution for icons can be found <a class="purple-700" href="/attribution.html">on the Attributions page</a>.
+    </p>
+    <p class="p mh-auto tc">
+      Content was created <a class="green-700" href="https://declare-ai.org/1.0.0/none.html">without any assistance from a generative AI</a>.
+    </p>
+  </section>
+</footer>
+
+  </body>
+</html>
