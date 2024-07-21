@@ -2,33 +2,9 @@
   "synth": {
     "brand": "Elektron",
     "name": "Digitakt",
-    "icon": "drum-machine-dr",
+    "icon": "drum-machine-mpcish",
     "firmware": "1.51A",
     "manualLink": "https://www.elektron.se/en/download-support-digitakt",
-    "tbd": {
-      "Copy Track Triggers": {
-      },
-      "Copy Track Triggers Page": {
-      },
-      "Copy Trig": {
-      },
-      "Copy Track Settings": {
-      },
-      "Roll Instrument (Roller)": {
-      },
-      "Step Repeat (Looper)": {
-      },
-      "Save and Restore a Pattern Quickly": {
-      },
-      "Compressor WTF": {
-      },
-      "LFO Page WTF": {
-      },
-      "Randomize Sample Slices": {
-      },
-      "Ordered Sample Slices": {
-      }
-    },
     "features": {
       "Copy Pattern": {
         "steps": [
@@ -39,6 +15,86 @@
           "Press <synth-button>FUNC</synth-button> and <synth-button narrow>⏹️</synth-button> to paste the pattern"
         ]
       },
+      "LFO Page WTF": {
+        "steps": [
+          "Set the Speed to 8",
+          "Set the MULT to 16",
+          "This will produce one cycle for each page, assuming the use of <sup>1</sup>&frasl;<sub>16</sub> notes per step",
+          {
+            "step": "I find the relationship confusing",
+            "details": [
+              [ "SPD&frasl;MULT", "2", "8", "32", "128" ],
+              [ "8",  "128", "32", "8", "2" ],
+              [ "32",  "32", "8", "2", "<sup>1</sup>&frasl;<sub>2</sub>" ],
+              [ "64", "16", "4", "1", "<sup>1</sup>&frasl;<sub>4</sub>" ]
+            ]
+          },
+          "For “FAD” a negative value is a fade-in",
+          {
+            "step": "The “MODE” values are as follows:",
+            "details": [
+              [ "Value", "Meaning" ],
+              [ "FRE", "Free-running, never restarting on triggers (though seems to restart on play)" ],
+              [ "TRG", "Restarts when a note is triggered" ],
+              [ "HLD", "Free-running, but a trigger latches to the current value until the next trig" ],
+              [ "ONE", "Runs once, like an envelope" ],
+              [ "HLF", "Runs for half the wave, then stops, like an envelope" ]
+            ]
+          }
+        ]
+      },
+      "Save and Restore a Pattern Quickly": {
+        "steps": [
+          "Hold <synth-button>FUNC</synth-button> and tap <synth-button>YES</synth-button>",
+          "Adjust anything anywhere you want",
+          "Hold <synth-button>FUNC</synth-button> and tap <synth-button>NO</synth-button>, and all changes are reverted to the save point"
+        ]
+      },
+      "Copy Track Triggers Page": {
+        "steps": [
+          "In recording mode, navigate to the page to copy",
+          "Hold down <synth-button>PAGE</synth-button> and tap <synth-button>⏺</synth-button>",
+          "Navigate to the page to paste to",
+          "Hold down <synth-button>PAGE</synth-button> and tap <synth-button>⏹️</synth-button>"
+        ]
+      },
+      "Copy Track Triggers": {
+        "steps": [
+          "Select the track to copy from",
+          "Tab <synth-button>⏺</synth-button>",
+          "Hold down <synth-button>FUNC</synth-button> and tap <synth-button>⏺</synth-button>",
+          "Hold down <synth-button>TRK</synth-button> and tap the track to copy to",
+          "Hold down <synth-button>FUNC</synth-button> and tap <synth-button>⏹️</synth-button>"
+        ],
+        "notes": "This copies trigs, but not parameters/sound"
+      },
+      "Copy Track Sound": {
+        "steps": [
+          "Select the track to copy from",
+          "Tab <synth-button>⏺</synth-button>",
+          "Hold down <synth-button>TRK</synth-button> and tap <synth-button>⏺</synth-button>",
+          "Hold down <synth-button>TRK</synth-button> and tap the track to copy to",
+          "Hold down <synth-button>TRK</synth-button> and tap <synth-button>⏹️</synth-button>"
+        ],
+        "notes": "This copies the sound, which is the sample + params"
+      },
+      "Copy Trig": {
+        "steps": [
+          "Hold down the trig to copy",
+          "Press <synth-button>⏺</synth-button> to copy it",
+          "Release and hold down the trig to paste to",
+          "Press <synth-button>⏹️</synth-button> to paste"
+        ],
+        "notes": "You can only paste to one trig at a time, but you can keep pasting as long as you don't copy something else"
+      },
+      "Compressor WTF": {
+        "steps": [
+          "Press <synth-button>FUNC</synth-button> and <synth-button>LFO</synth-button> to access the Compressor",
+          "“THR” is the threshold: lowever values mean more compression",
+          "“RAT” is the ratio: higher values mean more compression"
+        ],
+        "notes": "FIGURE OUT IF MUTING TRACK OF SIDECHAIN MUTES COMP"
+      },
       "Clear all Trigs in Pattern": {
         "steps": [
           "Exit Grid Recording mode",
@@ -46,12 +102,70 @@
           "Press <synth-button>FUNC</synth-button> and <synth-button narrow>▶️</synth-button> to clear the pattern's trigs"
         ]
       },
+      "Sample Slices - Random": {
+        "steps": [
+          "Ensure the track is using the “Slice” machine",
+          "Place trigs, e.g. every step or every other step",
+          "Press <synth-button>YES</synth-button>, then choose “Create Random Locks”",
+          "Press <synth-button>YES</synth-button> to confirm"
+        ]
+      },
+      "Sample Slices - Ordered": {
+        "steps": [
+          "Ensure the track is using the “Slice” machine",
+          "Place trigs, e.g. every step or every other step",
+          "Press <synth-button>YES</synth-button>, then choose “Create Linear Locks”",
+          "Press <synth-button>YES</synth-button> to confirm"
+        ]
+      },
       "Fill Mode WTF": {
         "steps": [
-          "Press <synth-button>YES</synth-button> and <synth-button>PAGE</synth-button> to activate fills for the next repetition of the pattern",
+          "Press <synth-button>YES</synth-button> and <synth-button>PAGE</synth-button> to activate fills for the <em>next</em> repetition of the pattern",
           "Hold <synth-button>PAGE</synth-button> to activate fills immediately while held down",
-          "Press <synth-button>YES</synth-button> and <synth-button>PAGE</synth-button>, release <synth-button>YES</synth-button>, then release <synth-button>PAGE</synth-button> to latch Fill Mode",
-          "Press <synth-button>PAGE</synth-button> to unlatch Fill Mode"
+          "To latch fill mode, you must be stopped!",
+          "Then, press <synth-button>YES</synth-button> and <synth-button>PAGE</synth-button>, release <synth-button>PAGE</synth-button>, then release <synth-button>YES</synth-button>",
+          "Press <synth-button>PAGE</synth-button> to unlatch Fill Mode (you can do this while playing)"
+        ]
+      },
+      "Sounds - Saving": {
+        "steps": [
+          "Press <synth-button>FUNC</synth-button> and <synth-button narrow>&ctdot;</synth-button>",
+          "Select “Export Sounds”",
+          "Use <synth-knob>Level/Data</synth-knob> to choose an empty slot",
+          "Name the sound",
+          "Add tags by navigating and tapping <synth-button>Yes</synth-button> to toggle tags",
+          "Navigate back to “Save”, then tap <synth-button>Yes</synth-button> to save"
+        ]
+      },
+      "Sounds - Flip per Step": {
+        "steps": [
+          "Hold down any of the trig buttons you want to flip",
+          "Turn <synth-knob>Level/Data</synth-knob>",
+          "Release the trigs when you've selected the sound",
+          "Press and hold the trigs again, and the name of the sound will show on the screen"
+        ]
+      },
+      "Sounds - Adding to Project": {
+        "steps": [
+          {
+            "step": "Add a sound to the Pool, which allows sound locks",
+            "details": [
+              [ "Step" ],
+              [ "Press <synth-button>FUNC</synth-button> and <synth-button narrow>&ctdot;</synth-button>"],
+              [ "Select “Manage Sounds”"],
+              [ "For each sound you want to add, press <synth-button>YES</synth-button> to select it"],
+              [ "Tap <synth-button>FUNC</synth-button> and <synth-button>YES</synth-button> to audition it"],
+              [ "Press <synth-button>&rarr;</synth-button> to open a menu"],
+              [ "Select “Copy To…”, then “Pool”" ]
+            ]
+          },
+          "Press <synth-button>FUNC</synth-button> and turn <synth-knob>Level/Data</synth-knob>",
+          "Press <synth-button>&larr;</synth-button> to reveal a menu",
+          "Select “View Pool”,  “View +Drive”, or “Filter” as needed",
+          "Tap <synth-button>FUNC</synth-button> and <synth-button>YES</synth-button> to audition sounds",
+          "Select the sound",
+          "You can hold <synth-button>FUNC</synth-button> and tap a track to change which track you will load into",
+          "Tap <synth-button>YES</synth-button> to change the sound of the track"
         ]
       },
       "Trig Conditions WTF": {
@@ -94,17 +208,21 @@
         "steps": [
           "Press <synth-button narrow>⏺</synth-button> and <synth-button narrow>⏹️</synth-button> to enter step recording mode",
           "Press a <synth-button>TRIG</synth-button> key to indicate where to start recording",
-          "Research more because this is a nightmare"
-        ]
+          "Enter notes via MIDI keyboard, and each step will advance",
+          "Tap <synth-button>NO</synth-button> to add a rest, or just tap the next trig where you want to enter a note"
+        ],
+        "notes": "Ties and length changes don't seem possible"
       },
       "Ratchet or Flam Steps (Retrig)": {
         "steps": [
           "Press and hold any <synth-button>TRIG</synth-button> keys",
           "Press <synth-button>&uarr;</synth-button> or <synth-button>&darr;</synth-button> to open menu",
           "“Retrig” must be on",
-          "Press <synth-button>&uarr;</synth-button> or <synth-button>&darr;</synth-button> to change the rate, with <sup>1</sup>&frasl;<sub>16</sub> being no retriggering",
-          "research more -- this is complicated"
-        ]
+          "Press <synth-button>&uarr;</synth-button> or <synth-button>&darr;</synth-button> to change the rate of retriggering",
+          "Turn <synth-knob>D</synth-knob> to configure how long retriggering will happen",
+          "Turn <synth-knob>H</synth-knob> to adjust the velocity curve. Negative values will fade out, positive fade up."
+        ],
+        "notes": "If a trig occurs before the rate + length would complete, the retriggering will be stopped by the trig"
       },
       "Time Division": {
         "steps": [
@@ -114,13 +232,20 @@
       }
     },
     "notes": [
+      "A Sound is a sample + the configuration of Digitakt parameters, like a preset",
       "Almost everything (including tempo and audio routing) is <em>per pattern</em>, so add patterns by copying one with the settings you want",
       "MIDI Outputs for the audio channels send CC only, not notes"
     ],
     "midi": {
       "programChange": true,
-      "cc": {},
-      "notes": "MIDI Channel must be changed in MIDI Control Center"
+      "cc": {
+        "Filter Cutoff": "74",
+        "Filter Resonance": "75",
+        "Reverb Send": "83",
+        "Delay Send": "82",
+        "Compressor Threshold": "111",
+        "Compresser Dry/Wet": "118"
+      }
     }
   }
 }
