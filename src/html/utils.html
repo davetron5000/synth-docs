@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%- include("templates/head.html", { title: "Menu Diving WTF | Utilities",
+                               description: "Non-Synth Reference Utilities",
+                             }) %>
+    <link rel="icon" href="<%= root_url %>/favicon.ico" sizes="32x32">
+    <link rel="icon" href="<%= root_url %>/images/icons/icon.png" type="image/png">
+  </head>
+  <body class="ff-sans">
+    <header class="purple-700 pt-2 bg-purple-400">
+      <div class="mh-auto w-90 w-50-ns flex items-center gap-3 mb-2">
+        <h1 class="ma-0 f-6 lh-title tc">Menu Diving WTF</h1>
+      </div>
+      <%- include("templates/nav.html") %>
+    </header>
+    <main class="bg-yellow-800 purple-100">
+      <section class="mh-auto w-90 w-50-ns ff-sans pv-3">
+        <h2 class="ma-0 f-5 mt-1 lh-title tc">Utilities</h2>
+        <p class="p">
+          Stuff I get tired of searching for and digging through ad/mailing-list/AI slop.
+        </p>
+        <ul class="lst-none pa-0">
+          <li class="p mb-2 f-3">
+            <a class="yellow-200" href="<%= root_url %>/bpm.html">BPM-to-ms Converter</a>
+          </li>
+          <li class="p mb-2 f-3">
+            <a class="yellow-200" href="<%= root_url %>/chord-changes.html">Chord Progression Help</a>
+          </li>
+          <li class="p mb-2 f-3">
+            <a class="yellow-200" href="<%= root_url %>/chord-replacements.html">Chord Substitutions Help</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <%- include("templates/footer.html") %>
+  </body>
+</html>

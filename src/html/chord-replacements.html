@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%- include("templates/head.html", { title: "Menu Diving WTF | Chord Substitutions Help",
+                               description: "Substituting One Chord with Another",
+                             }) %>
+    <link rel="icon" href="<%= root_url %>/assets/icon_f7chord.png" type="image/png">
+    <link rel="manifest" href="<%= root_url %>/chord-replacements-manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  </head>
+  <body class="ff-sans">
+    <header class="purple-700 pt-2 bg-purple-400">
+      <div class="mh-auto w-90 w-50-ns flex items-center gap-3 mb-2">
+        <h1 class="ma-0 f-6 lh-title tc">Menu Diving WTF</h1>
+      </div>
+      <%- include("templates/nav.html") %>
+    </header>
+    <main class="bg-yellow-800 purple-100">
+      <section class="mh-auto w-90 w-50-ns ff-sans pv-3">
+        <h2 class="ma-0 f-5 mt-1 lh-title tc">Chord Substitutions Help</h2>
+        <p class="p">
+          Yes, I know you can do whatever you want, but sometimes it's nice to have a very easy replacement to start from. Also, I realize this is like 1% of music theory.
+        </p>
+      </section>
+      <section class="bg-purple-300 purple-800">
+        <div class="mh-auto w-100 w-50-ns ff-sans pv-3">
+        <table class="w-100 collapse">
+          <thead>
+            <tr>
+              <th class="w-1 ws-nowrap bb bw-1 bc-purple-900 pa-2 tl fw-b">Chord</th>
+              <th class="w-1 ws-nowrap bb bw-1 bc-purple-900 pa-2 tl fw-b">Replacement</th>
+              <th class="              bb bw-1 bc-purple-900 pa-2 tl fw-b">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="f-3 w-1 ws-nowrap ff-mono pa-2 bb br bc-purple-900">
+                I/i
+              </td>
+              <td class="f-3 w-1 ws-nowrap ff-mono pa-2 bb bc-purple-900">
+                I/isus2
+              </td>
+              <td class="p purple-600 bl pa-2 bb bc-purple-900">
+                Remove the 3<sup>rd</sup>, add 2<sup>nd</sup>
+              </td>
+            </tr>
+            <tr>
+              <td class="f-3 w-1 ws-nowrap ff-mono pa-2 bb br bc-purple-900">
+                I/i
+              </td>
+              <td class="f-3 w-1 ws-nowrap ff-mono pa-2 bb bc-purple-900">
+                I/isus4
+              </td>
+              <td class="p purple-600 bl pa-2 bb bc-purple-900">
+                Remove the 3<sup>rd</sup>, add 4<sup>th</sup>
+              </td>
+            </tr>
+            <tr>
+              <td class="f-3 w-1 ws-nowrap ff-mono pa-2 bb br bc-purple-900">
+                I/i
+              </td>
+              <td class="f-3 w-1 ws-nowrap ff-mono pa-2 bb bc-purple-900">
+                I/i9
+              </td>
+              <td class="p purple-600 bl pa-2 bb bc-purple-900">
+                <strong>Not</strong> an “add9” - don't add 7<sup>th</sup>
+              </td>
+            </tr>
+            <tr>
+              <td class="f-3 w-1 ws-nowrap ff-mono pa-2 bb br bc-purple-900">
+                Imaj7
+              </td>
+              <td class="f-3 w-1 ws-nowrap ff-mono pa-2 bb bc-purple-900">
+                iii
+              </td>
+              <td class="p purple-600 bl pa-2 bb bc-purple-900">
+              </td>
+            </tr>
+            <tr>
+              <td class="f-3 w-1 ws-nowrap ff-mono pa-2 bb br bc-purple-900">
+                I
+              </td>
+              <td class="f-3 w-1 ws-nowrap ff-mono pa-2 bb bc-purple-900">
+                vi
+              </td>
+              <td class="p purple-600 bl pa-2 bb bc-purple-900">
+              </td>
+            </tr>
+            <tr>
+              <td class="f-3 w-1 ws-nowrap ff-mono pa-2 bb br bc-purple-900">
+                I &rarr; V<sup>7</sup>
+              </td>
+              <td class="f-3 w-1 ws-nowrap ff-mono pa-2 bb bc-purple-900">
+                I &rarr; II<sup>7</sup> &rarr; V<sup>7</sup>
+              </td>
+              <td class="p purple-600 bl pa-2 bb bc-purple-900">
+                <em>Secondary Dominant</em>, the added chord is the V<sup>7</sup> of the chord that follows it.
+              </td>
+            </tr>
+            <tr>
+              <td class="f-3 w-1 ws-nowrap ff-mono pa-2 bb br bc-purple-900">
+                I &rarr; vi
+              </td>
+              <td class="f-3 w-1 ws-nowrap ff-mono pa-2 bb bc-purple-900">
+                I &rarr; III<sup>7</sup> &rarr; vi
+              </td>
+              <td class="p purple-600 bl pa-2 bb bc-purple-900">
+                <em>Secondary Dominant</em> again - adds importance to the chord that follows it.
+              </td>
+            </tr>
+            <tr>
+              <td class="f-3 w-1 ws-nowrap ff-mono pa-2 bb br bc-purple-900">
+                7
+              </td>
+              <td class="f-3 w-1 ws-nowrap ff-mono pa-2 bb bc-purple-900">
+                sus4
+              </td>
+              <td class="p purple-600 bl pa-2 bb bc-purple-900">
+                Remove the 7<sup>th</sup>, add the 4<sup>th</sup>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <%- include("templates/footer.html") %>
+  </body>
+</html>

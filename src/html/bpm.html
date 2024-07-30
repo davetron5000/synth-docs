@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%- include("templates/head.html", { title: "Menu Diving WTF | BPM Calculator",
+                               description: "No tap tempo, no MIDI, no problem: Convert BPMs to MS",
+                             }) %>
+    <link rel="icon" href="<%= root_url %>/assets/icon_metronome.png" type="image/png">
+    <link rel="manifest" href="<%= root_url %>/bpm-manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  </head>
+  <body class="ff-sans">
+    <header class="purple-700 pt-2 bg-purple-400">
+      <div class="mh-auto w-90 w-50-ns flex items-center gap-3 mb-2">
+        <h1 class="ma-0 f-6 lh-title tc">Menu Diving WTF</h1>
+      </div>
+      <%- include("templates/nav.html") %>
+    </header>
+    <main class="bg-yellow-900 purple-200">
+      <section class="mh-auto w-90 w-50-ns ff-sans pv-3">
+        <h2 class="ma-0 f-5 mt-1 lh-title tc mb-3">BPM to ms Converter</h2>
+        <synth-bpm-calc>
+        <form>
+          <table class="w-100 collapse">
+            <thead>
+              <tr class="sr-only">
+                <th class="tl fw-b">BPM</th>
+                <th class="tl fw-b">ms</th>
+                <th class="tl fw-b">Note</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="pa-2 w-1 ws-nowrap" rowspan="2">
+                </td>
+                <td class="w-1 ws-nowrap pa-2 bb bc-purple-600 ff-mono tr" data-note="0.25">
+                  &nbsp;
+                </td>
+                <td class="w-1 ws-nowrap pv-2 pl-2 bb bc-purple-600 tc">
+                  <span class="w-2">
+                    <%- include("templates/notes/whole.svg") %>
+                  </span>
+                </td>
+                <td class="w-1 ws-nowrap pv-2 pr-2 va-bottom">
+                </td>
+              </tr>
+              <tr>
+                <td class="w-1 ws-nowrap pa-2 bb bc-purple-600 ff-mono tr" data-note="0.5">
+                  &nbsp;
+                </td>
+                <td class="w-1 ws-nowrap pv-2 pl-2 bb bc-purple-600 tc">
+                  <span class="w-2">
+                    <%- include("templates/notes/half.svg") %>
+                  </span>
+                </td>
+                <td class="w-1 ws-nowrap pv-2 pr-2 va-bottom">
+                </td>
+              </tr>
+              <tr>
+                <td class="pa-2 w-1 ws-nowrap va-top bb bc-purple-600">
+                </td>
+                <td class="w-1 ws-nowrap pa-2 bb bc-purple-600 ff-mono tr" data-note="0.6667">
+                  &nbsp;
+                </td>
+                <td class="w-1 ws-nowrap pv-2 pl-2 bb bc-purple-600 tc">
+                  <span class="w-2">
+                    <%- include("templates/notes/quarter.svg") %>
+                  </span>
+                </td>
+                <td class="w-1 ws-nowrap pv-2 pr-2 va-bottom">
+                  <span class="f-3">&middot;</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="pa-2 w-1 ws-nowrap va-middle bb bc-purple-600">
+                  <input type="number" min="0" step="1" required value="160" class="db w-5 f-3 ff-mono pa-2 bg-white black" name="bpm">
+                  <input type="submit" class="db mt-2 ba bc-gray-600 bg-gray-900 gray-200 br-2 ph-3 pv-2" value="Calculate">
+                </td>
+                <td class="w-1 ws-nowrap pa-2 bb bc-purple-600 ff-mono tr" data-note="1">
+                  &nbsp;
+                </td>
+                <td class="w-1 ws-nowrap pv-2 pl-2 bb bc-purple-600 tc">
+                  <span class="w-2">
+                    <%- include("templates/notes/quarter.svg") %>
+                  </span>
+                </td>
+                <td class="w-1 ws-nowrap pv-2 pr-2 va-bottom">
+                </td>
+              </tr>
+              <tr>
+                <td rowspan="7">
+                  </td>
+                <td class="w-1 ws-nowrap pa-2 bb bc-purple-600 ff-mono tr" data-note="1.5">
+                  &nbsp;
+                </td>
+                <td class="w-1 ws-nowrap pv-2 pl-2 bb bc-purple-600 tc">
+                  <span class="w-2">
+                    <%- include("templates/notes/quarter.svg") %>
+                  </span>
+                </td>
+                <td class="w-1 ws-nowrap pv-2 pr-2 va-bottom">
+                  3
+                </td>
+              </tr>
+              <tr>
+                <td class="w-1 ws-nowrap pa-2 bb bc-purple-600 ff-mono tr" data-note="1.333">
+                  &nbsp;
+                </td>
+                <td class="w-1 ws-nowrap pv-2 pl-2 bb bc-purple-600 tc">
+                  <span class="w-2">
+                    <%- include("templates/notes/eighth.svg") %>
+                  </span>
+                </td>
+                <td class="w-1 ws-nowrap pv-2 pr-2 va-bottom">
+                  <span class="f-3">&middot;</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="w-1 ws-nowrap pa-2 bb bc-purple-600 ff-mono tr" data-note="2">
+                  &nbsp;
+                </td>
+                <td class="w-1 ws-nowrap pv-2 pl-2 bb bc-purple-600 tc">
+                  <span class="w-2">
+                    <%- include("templates/notes/eighth.svg") %>
+                  </span>
+                </td>
+                <td class="w-1 ws-nowrap pv-2 pr-2 va-bottom">
+                </td>
+              </tr>
+              <tr>
+                <td class="w-1 ws-nowrap pa-2 bb bc-purple-600 ff-mono tr" data-note="3">
+                  &nbsp;
+                </td>
+                <td class="w-1 ws-nowrap pv-2 pl-2 bb bc-purple-600 tc">
+                  <span class="w-2">
+                    <%- include("templates/notes/eighth.svg") %>
+                  </span>
+                </td>
+                <td class="w-1 ws-nowrap pv-2 pr-2 va-bottom">
+                  3
+                </td>
+              </tr>
+              <tr>
+                <td class="w-1 ws-nowrap pa-2 bb bc-purple-600 ff-mono tr" data-note="2.666">
+                  &nbsp;
+                </td>
+                <td class="w-1 ws-nowrap pv-2 pl-2 bb bc-purple-600 tc">
+                  <span class="w-2">
+                    <%- include("templates/notes/sixteenth.svg") %>
+                  </span>
+                </td>
+                <td class="w-1 ws-nowrap pv-2 pr-2 va-bottom">
+                  <span class="f-3">&middot;</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="w-1 ws-nowrap pa-2 bb bc-purple-600 ff-mono tr" data-note="4">
+                  &nbsp;
+                </td>
+                <td class="w-1 ws-nowrap pv-2 pl-2 bb bc-purple-600 tc">
+                  <span class="w-2">
+                    <%- include("templates/notes/sixteenth.svg") %>
+                  </span>
+                </td>
+                <td class="w-1 ws-nowrap pv-2 pr-2 va-bottom">
+                </td>
+              </tr>
+              <tr>
+                <td class="w-1 ws-nowrap pa-2 bb bc-purple-600 ff-mono tr" data-note="6">
+                  &nbsp;
+                </td>
+                <td class="w-1 ws-nowrap pv-2 pl-2 bb bc-purple-600 tc">
+                  <span class="w-2">
+                    <%- include("templates/notes/sixteenth.svg") %>
+                  </span>
+                </td>
+                <td class="w-1 ws-nowrap pv-2 pr-2 va-bottom">
+                  3
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+        </synth-bpm-calc>
+      </section>
+    </main>
+    <%- include("templates/footer.html") %>
+  </body>
+</html>
