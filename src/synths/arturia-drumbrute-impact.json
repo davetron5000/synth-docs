@@ -116,9 +116,11 @@
     },
     "notes": [
       "You must hit <synth-button>Sync</synth-button> to select MIDI if using MIDI. Every. Single. Time.",
+      "The “Auto Sync” feature available in MIDI control center doesn't exactly work. It reverts the Drumbrute to the internal clock often and creates an unreliable situation",
       "Closed HH will choke Open HH",
       "When cable is plugged into individual out, it's removed from the main out and headphones out",
-      "Distortion only applies to instruments sent into Main out, not anything on individual outs"
+      "Distortion only applies to instruments sent into Main out, not anything on individual outs",
+      "Before using MCC to change things, import your patterns or they will be lost when you update the Drumbrute Impact"
     ],
     "midi": {
       "programChange": true,

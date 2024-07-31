@@ -21,6 +21,12 @@
         ],
         "notes": "Clock Source must be MIDI or External Gate for this to have any effect"
       },
+      "Stuck Note": {
+        "steps": [
+          "Hold <synth-button>Green</synth-button>, then press <synth-button narrow>D</synth-button> to enter “hold” mode.",
+          "While <synth-button>Green</synth-button> is still held, press <synth-button narrow>D</synth-button> again to clear the stuck note"
+        ]
+      },
       "Clock Source": {
         "steps": [
           {
@@ -190,7 +196,8 @@
     "notes": [
       "MIDI CC cannot be cleared, so make sure whatever you set it to, you've sent the max value. Otherwise, the multi will appear not to work",
       "Voltages within Eurorack guides (±12V) will not damage the unit",
-      "Most CV inputs are set to 'top out' at +5V, but can receive higher voltages"
+      "Most CV inputs are set to 'top out' at +5V, but can receive higher voltages",
+      "Stuck notes are very common"
     ],
     "midi": {
       "programChange": false,

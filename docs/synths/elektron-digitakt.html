@@ -27,7 +27,7 @@
           <button data-if-pwa class="dn ba br-3 bc-purple-600 bg-purple-800 shadow-1 purple-500">Refresh Content</button>
         </synth-reload>
       </synth-pwa-detection>
-      <time class="pr-2 purple-600" datetime="2024-07-30T02:10:33.746Z">Published Tue Jul 30 2024</time>
+      <time class="pr-2 purple-600" datetime="2024-07-31T19:43:08.451Z">Published Wed Jul 31 2024</time>
     </header>
     <main>
       <section class="purple-300 bg-purple-700 ph-2 pb-2 pt-3 w-100 w-50-ns mh-auto">
@@ -166,9 +166,85 @@
                   
                 </li>
               
+                <li>
+                  
+                    <p class="p">“SCS” is the sidechain source, i.e. what is triggering compression</p>
+                    <table class="collapse w-100">
+                      <thead>
+                        <tr>
+                          
+                            <th class="tl pa-2 bb bw-1">Value</th>
+                          
+                            <th class="tl pa-2 bb bw-1">Meaning</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                MAIN
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Main L/R mix triggers compression, i.e. the conventional approach
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                TRK1–8
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Track 1–8, respectively, triggers the compression, i.e. sidechaining.
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                IN L
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Left input triggers the compression, i.e. sidechaining from external source.
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                IN R
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Right input triggers the compression, i.e. sidechaining from external source.
+                              </td>
+                            
+                          </tr>
+                        
+                      </tbody>
+                    </table>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">
+                      “SCF” filters the sidechain, with negative being a low-pass and positive being high-pass
+                    </p>
+                  
+                </li>
+              
             </ol>
             
-            <p class="f-1 i measure-wide ph-3">FIGURE OUT IF MUTING TRACK OF SIDECHAIN MUTES COMP</p>
+            <p class="f-1 i measure-wide ph-3">Muting the sidechained track stops all compression, however make-up gain is still applied, so this tends to not sound great</p>
             
           </details>
         
@@ -780,7 +856,7 @@
               
             </ol>
             
-            <p class="f-1 i measure-wide ph-3">If a trig occurs before the rate + length would complete, the retriggering will be stopped by the trig</p>
+            <p class="f-1 i measure-wide ph-3">MIDI trigs cannot be ratcheted.  Also note if a trig occurs before the rate + length would complete, the retriggering will be stopped by the trig</p>
             
           </details>
         
@@ -1360,6 +1436,8 @@
               
             </ol>
             
+            <p class="f-1 i measure-wide ph-3">To trig different notes on the same step under different conditions, micro-timing can be used to move any step completely forward or backward one step</p>
+            
           </details>
         
       </section>
@@ -1380,6 +1458,18 @@
                 <li>
                     <p class="p">
                       Almost everything (including tempo and audio routing) is <em>per pattern</em>, so add patterns by copying one with the settings you want
+                    </p>
+                </li>
+              
+                <li>
+                    <p class="p">
+                      Program change trigs won't work if MIDI &rarr; SYNC &rarr; PR CH SEND is checked
+                    </p>
+                </li>
+              
+                <li>
+                    <p class="p">
+                      Also note that program changes are handled by external hardware differently, so they may simply queue a program change for the next bar
                     </p>
                 </li>
               

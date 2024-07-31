@@ -91,9 +91,21 @@
         "steps": [
           "Press <synth-button>FUNC</synth-button> and <synth-button>LFO</synth-button> to access the Compressor",
           "“THR” is the threshold: lowever values mean more compression",
-          "“RAT” is the ratio: higher values mean more compression"
+          "“RAT” is the ratio: higher values mean more compression",
+          {
+            "step": "“SCS” is the sidechain source, i.e. what is triggering compression",
+            "details": [
+              [ "Value", "Meaning" ],
+              [ "MAIN", "Main L/R mix triggers compression, i.e. the conventional approach" ],
+              [ "TRK1–8", "Track 1–8, respectively, triggers the compression, i.e. sidechaining."],
+              [ "IN L", "Left input triggers the compression, i.e. sidechaining from external source."],
+              [ "IN R", "Right input triggers the compression, i.e. sidechaining from external source."]
+
+            ]
+          },
+          "“SCF” filters the sidechain, with negative being a low-pass and positive being high-pass"
         ],
-        "notes": "FIGURE OUT IF MUTING TRACK OF SIDECHAIN MUTES COMP"
+        "notes": "Muting the sidechained track stops all compression, however make-up gain is still applied, so this tends to not sound great"
       },
       "Clear all Trigs in Pattern": {
         "steps": [
@@ -187,7 +199,8 @@
               [ "<span class='tdo'>NEI</span>", "Played when most previous condition on track-1 not true" ]
             ]
           }
-        ]
+        ],
+        "notes": "To trig different notes on the same step under different conditions, micro-timing can be used to move any step completely forward or backward one step"
       },
       "Clear Step Param Lock": {
         "steps": [
@@ -222,7 +235,7 @@
           "Turn <synth-knob>D</synth-knob> to configure how long retriggering will happen",
           "Turn <synth-knob>H</synth-knob> to adjust the velocity curve. Negative values will fade out, positive fade up."
         ],
-        "notes": "If a trig occurs before the rate + length would complete, the retriggering will be stopped by the trig"
+        "notes": "MIDI trigs cannot be ratcheted.  Also note if a trig occurs before the rate + length would complete, the retriggering will be stopped by the trig"
       },
       "Time Division": {
         "steps": [
@@ -234,6 +247,8 @@
     "notes": [
       "A Sound is a sample + the configuration of Digitakt parameters, like a preset",
       "Almost everything (including tempo and audio routing) is <em>per pattern</em>, so add patterns by copying one with the settings you want",
+      "Program change trigs won't work if MIDI &rarr; SYNC &rarr; PR CH SEND is checked",
+      "Also note that program changes are handled by external hardware differently, so they may simply queue a program change for the next bar",
       "MIDI Outputs for the audio channels send CC only, not notes"
     ],
     "midi": {
