@@ -27,7 +27,7 @@
           <button data-if-pwa class="dn ba br-3 bc-purple-600 bg-purple-800 shadow-1 purple-500">Refresh Content</button>
         </synth-reload>
       </synth-pwa-detection>
-      <time class="pr-2 purple-600" datetime="2024-07-31T19:43:08.448Z">Published Wed Jul 31 2024</time>
+      <time class="pr-2 purple-600" datetime="2024-08-20T01:28:44.953Z">Published Tue Aug 20 2024</time>
     </header>
     <main>
       <section class="purple-300 bg-purple-700 ph-2 pb-2 pt-3 w-100 w-50-ns mh-auto">
@@ -1125,6 +1125,320 @@
             </ol>
             
             <p class="f-1 i measure-wide ph-3">MIDI CC will control the amplitude of the triangle</p>
+            
+          </details>
+        
+          <details class="feature-doc pa-2">
+            <summary class="ma-0 f-4 pv-2 lh-title">
+              <h4 class="f-4 tdu">Patchbay WTF</h4>
+            </summary>
+            <ol>
+              
+                <li>
+                  
+                    <p class="p">
+                      Patch Gate to VCA Mod to defeat VCA Env
+                    </p>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">Output CVs:</p>
+                    <table class="collapse w-100">
+                      <thead>
+                        <tr>
+                          
+                            <th class="tl pa-2 bb bw-1">Jack</th>
+                          
+                            <th class="tl pa-2 bb bw-1">Notes</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                Clock out
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Outputs Clock only when sequedncer is running
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                Env Out
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Envelope CV output, 0-10V
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                Gate Out
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Trigger when notes played
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                LFO Out
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Triangle LFO, ±5V
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                Multi
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Outputs CV based on Multi configuration
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                Pitch
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Outputs CV based on pitch from e.g. MIDI
+                              </td>
+                            
+                          </tr>
+                        
+                      </tbody>
+                    </table>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">Output Audio:</p>
+                    <table class="collapse w-100">
+                      <thead>
+                        <tr>
+                          
+                            <th class="tl pa-2 bb bw-1">Jack</th>
+                          
+                            <th class="tl pa-2 bb bw-1">Notes</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                Filter Out
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Audio from the filter
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                Osc Out
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Outputs the waveform
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                Output
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Audio output to e.g. mixer
+                              </td>
+                            
+                          </tr>
+                        
+                      </tbody>
+                    </table>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">Input CVs:</p>
+                    <table class="collapse w-100">
+                      <thead>
+                        <tr>
+                          
+                            <th class="tl pa-2 bb bw-1">Jack</th>
+                          
+                            <th class="tl pa-2 bb bw-1">Notes</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                Clock In
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                External clock input
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                Env In
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Gate input, triggers envelope
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                FM
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Linear Frequency Modulation
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                Filter Mod
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Cutoff modulation, feeds into <synth-knob>Filter Mod</synth-knob>
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                Pitch
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                1V/Octave
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                VCA Mod
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                CV to modulate the VCA
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                Width
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Pulse with, negative is 100%, positive 0%
+                              </td>
+                            
+                          </tr>
+                        
+                      </tbody>
+                    </table>
+                  
+                </li>
+              
+                <li>
+                  
+                    <p class="p">Input Audio:</p>
+                    <table class="collapse w-100">
+                      <thead>
+                        <tr>
+                          
+                            <th class="tl pa-2 bb bw-1">Jack</th>
+                          
+                            <th class="tl pa-2 bb bw-1">Notes</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                Filter In
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Audio into the filter
+                              </td>
+                            
+                          </tr>
+                        
+                          <tr>
+                            
+                              <td class="pa-2 bb w-1 ws-nowrap">
+                                VCA In
+                              </td>
+                            
+                              <td class="pa-2 bb ">
+                                Audio into the VCA
+                              </td>
+                            
+                          </tr>
+                        
+                      </tbody>
+                    </table>
+                  
+                </li>
+              
+            </ol>
             
           </details>
         
