@@ -1,0 +1,17 @@
+<header class="purple-100 pt-2 bg-purple-900">
+  <div class="mh-auto w-90 w-50-ns flex flex-column items-center justify-center mb-2">
+    <h1 class="ma-0 f-5 lh-title">Menu Diving WTF</h1>
+    <% if (typeof(subtitle) !== "undefined" && subtitle) { %>
+      <h2 class="ma-0 f-4 mt-1 lh-title tc"><%= subtitle %></h2>
+    <% } %>
+    <% if (typeof(full) !== "undefined" && full) { %>
+      <p class="p f-3">
+        Your synth has amazing features…hidden behind opaque shift functions and byzantine menus. And its manual is a huge PDF wall of text <span role="img" aria-description="crying emoji">😭</span>.
+      </p>
+      <p class="p">
+        These quick references are hand-crafted as reminders of features your synth has and how to get to them.  These aren't manuals—just fast ways to get the sounds you want without breaking you out of your flow paging through a manual.
+      </p>
+    <% } %>
+  </div>
+  <%- include("nav.html") %>
+</header>

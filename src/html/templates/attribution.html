@@ -10,15 +10,7 @@
     <link rel="manifest" href="<%= root_url %>/manifest.webmanifest">
   </head>
   <body class="ff-sans">
-    <header class="purple-700 pt-4 bg-purple-400">
-      <div class="mh-auto w-90 w-50-ns flex items-center gap-3">
-        <div>
-          <h1 class="ma-0 f-6 lh-title tc">Menu Diving WTF</h1>
-          <h2 class="ma-0 f-5 mt-1 lh-title tc">Atrribution of Contents</h2>
-        </div>
-      </div>
-      <%- include("nav.html") %>
-    </header>
+    <%- include("header.html", { subtitle: "Attribution of Contents" }) %>
     <main class="bg-white black">
       <section class="mh-auto w-90 w-50-ns ff-sans pv-3">
         <h3 class="f-4">Musical Notes</h3>

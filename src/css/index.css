@@ -1,7 +1,8 @@
 @import "melange-css/melange.css";
 
 :root {
-  --mg-ff-sans: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+  --mg-ff-sans-other: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+  --mg-ff-sans: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
   --mg-ff-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
 }
 
@@ -9,9 +10,7 @@ details summary {
   cursor: pointer;
   list-style:none;
 }
-summary::-webkit-details-marker {
- display: none;
-}
+
 details summary > * {
   display: inline;
 }
@@ -26,7 +25,7 @@ synth-button {
   letter-spacing: var(--mg-ls-tight);
   text-transform: uppercase;
   font-weight: 600;
-  border-radius: var(--mg-bw-1);
+  border-radius: var(--mg-bw-2);
   min-width:  var(--mg-sp-5);
   text-align: center;
   background-color: rgba(255,255,255,0.15);
@@ -35,13 +34,13 @@ synth-button[narrow] {
   min-width:  var(--mg-sp-3);
 }
 
-details.feature-doc:nth-child(even) {
-  background-color: var(--mg-purple-300);
-  color: var(--mg-purple-700)
-}
 details.feature-doc:nth-child(odd) {
-  background-color: var(--mg-purple-100);
-  color: var(--mg-purple-700)
+  background-color: var(--mg-white-ish);
+  color: var(--mg-purple-100)
+}
+details.feature-doc:nth-child(even) {
+  background-color: var(--mg-gray-800);
+  color: var(--mg-purple-100)
 }
 
 synth-knob {
@@ -73,16 +72,18 @@ synth-switch {
 synth-led {
   width: var(--mg-sp-3);
   height: var(--mg-sp-3);
-  border: solid thin var(--mg-yellow-700);
+  border: solid thin var(--mg-orange-100);
   border-radius: 100%;
-  background-color: var(--mg-yellow-100);
+  background-color: var(--mg-orange-100);
   display: inline-block;
   margin-left: var(--mg-sp-1);
   margin-right: var(--mg-sp-1);
 }
 
 synth-led[lit] {
-  background-color: var(--mg-yellow-700);
+  border: solid thin var(--mg-orange-700);
+  background-color: var(--mg-orange-700);
+  box-shadow: 0 0 7px 1px var(--mg-orange-600);
 }
 
 button.shadow-1:active {

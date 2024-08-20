@@ -14,34 +14,23 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
   </head>
   <body class="ff-sans">
-    <header class="purple-700 pv-2 bg-purple-400 flex items-center justify-between gap-2">
+    <header class="purple-100 pv-2 bg-purple-800 flex items-center justify-between gap-2">
       <synth-pwa-detection class="pl-2">
-        <h1 data-if-not-pwa class="f-3 ma-0 lh-title"><a href="<%= root_url %>/" class="purple-700"><span role="img" aria-description="back arrow">&larr;</span> menudiving.wtf</a></h1>
+        <h1 data-if-not-pwa class="f-3 ma-0 lh-title"><a href="<%= root_url %>/" class="purple-200"><span role="img" aria-description="back arrow">&larr;</span> menudiving.wtf</a></h1>
         <synth-reload>
-          <button data-if-pwa class="dn ba br-3 bc-purple-600 bg-purple-800 shadow-1 purple-500">Refresh Content</button>
+          <button data-if-pwa class="dn ba br-3 bc-purple-800 bg-purple-900 shadow-1 purple-400">Refresh Content</button>
         </synth-reload>
       </synth-pwa-detection>
-      <time class="pr-2 purple-600" datetime="<%= date.toISOString() %>">Published <%= date.toDateString() %></time>
+      <time class="pr-2 purple-300" datetime="<%= date.toISOString() %>">Published <%= date.toDateString() %></time>
     </header>
     <main>
-      <section class="purple-300 bg-purple-700 ph-2 pb-2 pt-3 w-100 w-50-ns mh-auto">
+      <section class="purple-100 bg-white-ish ph-2 pb-2 pt-3 w-100 w-50-ns mh-auto">
         <h3 class="ma-0 f-3 ttu tracked">
           <%= synth.brand %>
         </h3>
         <h2 class="ma-0 f-5 lh-title">
             <%= synth.name %>
         </h2>
-        <synth-homescreen-notification>
-          <aside class="ba bc-orange-400 bg-orange-900 br-3 pa-3 mt-3 mb-2 orange-300 f-3 flex items-end justify-between">
-            <div class="flex items-center justify-start gap-2">
-              <span role="img" aria-description="light bulb">💡</span>
-              <p class="p pa-0 ma-0">
-                Add this page to your phone's homescreen for better access.  <a class="orange-300" href="<%= root_url %>/how-to-use.html">Learn how</a>
-              </p>
-            </div>
-            <button class="db ba pointer bc-orange-300 br-2 bg-orange-300 orange-700 f-1 shadow-1">Dismiss</button>
-          </aside>
-        </synth-homescreen-notification>
         <div class="flex items-center justify-between gap-3">
         <% if (synth.firmware) { %>
         <p class="p f-2 purple-300">
@@ -58,13 +47,24 @@
         </p>
         <% } %>
         </div>
+        <synth-homescreen-notification>
+          <aside class="ba bc-orange-400 bg-orange-900 br-3 pa-3 mt-3 mb-2 orange-300 f-3 flex items-end justify-between">
+            <div class="flex items-center justify-start gap-2">
+              <span role="img" aria-description="light bulb">💡</span>
+              <p class="p pa-0 ma-0">
+                Add this page to your phone's homescreen for better access.  <a class="orange-300" href="<%= root_url %>/how-to-use.html">Learn how</a>
+              </p>
+            </div>
+            <button class="db ba pointer bc-orange-700 br-2 bg-orange-800 orange-400 f-1 shadow-1">Dismiss</button>
+          </aside>
+        </synth-homescreen-notification>
       </section>
       <section class="mh-auto w-100 w-50-ns ff-sans mh-2">
         <h3 class="sr-only">Features</h3>
         <% Object.entries(synth.features).sort( (a,b) => a[0].localeCompare(b[0]) ).forEach( ([featureName,feature]) => { %>
           <details class="feature-doc pa-2">
             <summary class="ma-0 f-4 pv-2 lh-title">
-              <h4 class="f-4 tdu"><%= featureName %></h4>
+              <h4 class="f-4 fw-4"><%= featureName %></h4>
             </summary>
             <ol>
               <% feature.steps.forEach( (step) => { %>
@@ -107,9 +107,9 @@
       </section>
       <section class="mh-auto w-100 w-50-ns ff-sans mh-2">
         <% if (synth.notes) { %>
-          <details class="bg-yellow-300 yellow-900 pa-2">
+          <details class="bg-purple-300 purple-900 pa-2">
             <summary class="ma-0 f-4 pv-2 lh-title">
-              <h3 class="f-4 tdu">Notes and Non-Obvious Behaviors</h3>
+              <h3 class="f-3 fw-4">Notes and Non-Obvious Behaviors</h3>
             </summary>
             <ul>
               <% synth.notes.forEach( (note) => { %>
@@ -122,9 +122,9 @@
             </ul>
           </details>
         <% } %>
-        <details class="bg-yellow-lighest yellow-300 pa-2">
+        <details class="bg-purple-700 purple-300 pa-2">
           <summary class="ma-0 f-4 lh-title pv-2">
-            <h3 class="f-4 tdu">MIDI Info &amp; CCs</h3>
+            <h3 class="f-3 fw-4">MIDI Info &amp; CCs</h3>
           </summary>
           <% if (synth.midi.programChange) {  %>
             <p class="f-1 fw-4"><span role="img" aria-label="checkmark">✅</span> Responds to Program Change</p>
