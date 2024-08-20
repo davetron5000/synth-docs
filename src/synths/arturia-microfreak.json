@@ -65,7 +65,8 @@
         "Oscillator Timbre": "12",
         "Oscillator Shape": "13",
         "Spice": "2"
-      }
+      },
+      "notes": "To have 'Press' respond to Veloicty, Use <synth-button>Utilities</synth-button> to configure, per patch"
     }
   }
 }

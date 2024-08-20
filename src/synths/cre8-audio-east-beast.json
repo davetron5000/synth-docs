@@ -41,6 +41,53 @@
           }
         ]
       },
+      "Patchbay WTF": {
+        "steps": [
+          "Patch Gate to VCA Mod to defeat VCA Env",
+          {
+            "step": "Output CVs:",
+            "details": [
+              [ "Jack", "Notes" ],
+              [ "Clock out", "Outputs Clock only when sequedncer is running" ],
+              [ "Env Out", "Envelope CV output, 0-10V" ],
+              [ "Gate Out", "Trigger when notes played" ],
+              [ "LFO Out", "Triangle LFO, ±5V" ],
+              [ "Multi", "Outputs CV based on Multi configuration" ],
+              [ "Pitch", "Outputs CV based on pitch from e.g. MIDI" ]
+            ]
+          },
+          {
+            "step": "Output Audio:",
+            "details": [
+              [ "Jack", "Notes" ],
+              [ "Filter Out", "Audio from the filter" ],
+              [ "Osc Out", "Outputs the waveform" ],
+              [ "Output", "Audio output to e.g. mixer" ]
+            ]
+          },
+          {
+            "step": "Input CVs:",
+            "details": [
+              [ "Jack", "Notes" ],
+              [ "Clock In", "External clock input" ],
+              [ "Env In", "Gate input, triggers envelope" ],
+              [ "FM", "Linear Frequency Modulation" ],
+              [ "Filter Mod", "Cutoff modulation, feeds into <synth-knob>Filter Mod</synth-knob>" ],
+              [ "Pitch", "1V/Octave" ],
+              [ "VCA Mod", "CV to modulate the VCA" ],
+              [ "Width", "Pulse with, negative is 100%, positive 0%" ]
+            ]
+          },
+          {
+            "step": "Input Audio:",
+            "details": [
+              [ "Jack", "Notes" ],
+              [ "Filter In", "Audio into the filter" ],
+              [ "VCA In", "Audio into the VCA" ]
+            ]
+          }
+        ]
+      },
       "MIDI Channel": {
         "steps": [
           {
