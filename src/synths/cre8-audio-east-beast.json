@@ -116,6 +116,14 @@
         ],
         "notes": "If interpreted as binary numbers written backward, the binary number is one less than the MIDI channel it corresponds to."
       },
+      "MIDI CC": {
+        "steps": [
+          "Hold <synth-button>Green</synth-button> and <synth-button>G#</synth-button>",
+          "Send the MIDI CC message from wherever",
+          "Release both buttons"
+        ],
+        "notes": "If the CC's value is 0 (or low), several multi functions will appear to not work. Set it to the highest value to be safe"
+      },
       "Multi Output": {
         "steps": [
           {
