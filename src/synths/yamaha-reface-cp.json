@@ -1,0 +1,36 @@
+{
+  "synth": {
+    "brand": "Yamaha",
+    "name": "Reface CP",
+    "icon": "synth-controller",
+    "firmware": "1.3.0",
+    "manualLink": "https://usa.yamaha.com/products/music_production/synthesizers/reface/downloads.html",
+    "features": {
+      "Grand Piano": {
+        "steps": [
+          "Power down",
+          "Put <synth-knob>type</synth-knob> in between any two settings",
+          "Power on",
+          "Don't touch anytning"
+        ]
+      }
+    },
+    "midi": {
+      "programChange": false,
+      "cc": {
+        "Change Type": "80",
+        "Drive": "81",
+        "Tremolo/Wah Select": "17",
+        "Tremolo/Wah Depth": "18",
+        "Tremolo/Wah Rate": "19",
+        "Chorus/Phaser Select": "85",
+        "Chorus/Phaser Depth": "86",
+        "Chorus/Phaser Speed": "87",
+        "Delay Select": "88",
+        "Delay Depth": "89",
+        "Delay Time": "90",
+        "Reverb Depth": "91"
+      }
+    }
+  }
+}
