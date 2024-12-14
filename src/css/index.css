@@ -34,11 +34,11 @@ synth-button[narrow] {
   min-width:  var(--mg-sp-3);
 }
 
-details.feature-doc:nth-child(odd) {
+details.feature-doc:nth-child(odd), tr:nth-child(odd) {
   background-color: var(--mg-white-ish);
   color: var(--mg-purple-100)
 }
-details.feature-doc:nth-child(even) {
+details.feature-doc:nth-child(even), tr:nth-child(even) {
   background-color: var(--mg-gray-800);
   color: var(--mg-purple-100)
 }
