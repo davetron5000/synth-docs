@@ -42,6 +42,13 @@
           "Press the <synth-button>Paraphonic</synth-button> button"
         ]
       },
+      "Modulating Sample": {
+        "steps": [
+          "Change to sample select mode via <synth-button>Shift</synth-button> and <synth-knob>Type</synth-knob>",
+          "Hold one of the <synth-button>Assign</synth-button> buttons in the mod matrix and move <synth-knob>Type</synth-knob>",
+          "You can leave sample mode and now modulate the sample via the column you assigned"
+        ]
+      },
       "Unison": {
         "steps": [
           "Hold down <synth-button>Shift</synth-button> and hold down <synth-button>Paraphonic</synth-button>",
